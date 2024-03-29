@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Outros/3ºAno-2ºSemestre/DA/Projeto 1/Project_DA/Project1LargeDataSet
+# Install script for directory: C:/Users/Outros/3ºAno-2ºSemestre/DA/Projeto 1/Project_DA/Project_DA
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Outros/3ºAno-2ºSemestre/DA/Projeto 1/Project_DA/Project1LargeDataSet/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Outros/3ºAno-2ºSemestre/DA/Projeto 1/Project_DA/Project_DA/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

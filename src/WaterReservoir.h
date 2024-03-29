@@ -8,23 +8,23 @@ using namespace std;
 
 class WaterReservoir {
 private:
-    std::string name;
-    std::string municipality;
+    string reservoir;
+    string municipality;
     int reservoir_id;
-    std::string code;
-    double max_delivery;
+    string code;
+    int max_delivery;
 
 public:
     WaterReservoir();
-    WaterReservoir(string name, string municipality, int reservoir_id, string code, double max_delivery);
+    WaterReservoir(string reservoir, string municipality, int reservoir_id, string code, int max_delivery);
 
-    string getName() const;
+    string getReservoir() const;
     string getMunicipality() const;
     int getReservoirId() const;
     string getCode() const;
-    double getMaxDelivery() const;
+    int getMaxDelivery() const;
 
-    void setName(string s);
+    void setReservoir(string s);
     void setMunicipality(string m);
     void setReservoirId(int r);
     void setCode(string c);

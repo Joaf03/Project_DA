@@ -3,8 +3,11 @@ using namespace std;
 
 Pipeline::Pipeline() = default;
 
-Pipeline::Pipeline(std::string source, std::string target, double capacity, bool is_bidirectional){
-    this->source = source
+Pipeline::Pipeline(string source, string target, double capacity, bool is_bidirectional){
+    this->source = source;
+    this->target = target;
+    this->capacity = capacity;
+    this->is_bidirectional = is_bidirectional;
 }
 
 std::string Pipeline::getSource() const {

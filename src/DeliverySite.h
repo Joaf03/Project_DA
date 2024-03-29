@@ -8,23 +8,23 @@ class DeliverySite {
 private:
     string city;
     int id;
-    std::string code;
+    string code;
     double demand;
-    int population;
+    double population;
 
 public:
     DeliverySite();
-    DeliverySite(string city, int id, std::string code, double demand, int population);
+    DeliverySite(string city, int id, string code, double demand, double population);
 
     string getCity() const;
     int getId() const;
-    std::string getCode() const;
+    string getCode() const;
     double getDemand() const;
-    int getPopulation() const;
+    double getPopulation() const;
 
-    void setCity(string city) const;
+    void setCity(string city);
     void setId(int id);
-    void setCode(std::string code);
+    void setCode(string code);
     void setDemand(double demand);
     void setPopulation(int population);
 };

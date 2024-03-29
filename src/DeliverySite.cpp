@@ -3,7 +3,7 @@ using namespace std;
 
 DeliverySite::DeliverySite() = default;
 
-DeliverySite::DeliverySite(string city, int id, string code, double demand, int population){
+DeliverySite::DeliverySite(string city, int id, string code, double demand, double population){
     this->city = city;
     this->id = id;
     this->code = code;
@@ -19,7 +19,7 @@ int DeliverySite::getId() const {
     return id;
 }
 
-std::string DeliverySite::getCode() const {
+string DeliverySite::getCode() const {
     return code;
 }
 
@@ -27,11 +27,11 @@ double DeliverySite::getDemand() const {
     return demand;
 }
 
-int DeliverySite::getPopulation() const {
+double DeliverySite::getPopulation() const {
     return population;
 }
 
-void DeliverySite::setCity(string city) const {
+void DeliverySite::setCity(string city) {
     this->city = city;
 }
 
