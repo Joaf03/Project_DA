@@ -1,5 +1,8 @@
 #include <iostream>
 #include "DataLoader.h"
+#include "Graph.h"
+#include "waterNeeds.h"
+
 using namespace std;
 
 int main(){
@@ -22,4 +25,15 @@ int main(){
     vector<Pipeline> pipelines = DataLoader::loadPipelines(filename);
 
     for (const Pipeline &pipeline: pipelines) cout << pipeline.getSource() << '\n';
+
+    // Create Main Graph
+    Graph mainGraph;
+    mainGraph.addDeliverySites(deliverySites);
+    mainGraph.addPumpingStations(pumpingStations);
+    mainGraph.addWaterReservoirs(waterReservoirs);
+    mainGraph.addPipelines(pipelines);
+
+    std::vector<std::pair<std::string, double>> result = waterNeeds::citiesWithDeficit(mainGraph);
+    for(auto &city: result) cout << city.first << " " << city.second << '\n';
+
 }
