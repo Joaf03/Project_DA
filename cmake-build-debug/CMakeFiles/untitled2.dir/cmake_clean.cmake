@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled2.dir/src/WaterReservoir.cpp.obj.d"
   "CMakeFiles/untitled2.dir/src/main.cpp.obj"
   "CMakeFiles/untitled2.dir/src/main.cpp.obj.d"
+  "CMakeFiles/untitled2.dir/src/menu.cpp.obj"
+  "CMakeFiles/untitled2.dir/src/menu.cpp.obj.d"
   "CMakeFiles/untitled2.dir/src/waterNeeds.cpp.obj"
   "CMakeFiles/untitled2.dir/src/waterNeeds.cpp.obj.d"
   "libuntitled2.dll.a"

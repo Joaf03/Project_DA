@@ -35,20 +35,31 @@ std::vector<std::pair<std::string, double>> waterNeeds::citiesWithDeficit(Graph 
     return citiesWithDeficit;
 }
 
-unordered_map<string, double> waterNeeds::maxFlow(Graph mainGraph) {
-    // this function should get the maxFlows using the Edmonds-Karp algorithm implemented in the Graph.cpp file
+unordered_map<string, double> waterNeeds::maxFlow(Graph mainGraph, const string& city) {
+
     unordered_map<string, double> maxFlows;
     unordered_map<string, DeliverySite> deliverySites = mainGraph.getDeliverySites();
     unordered_map<string, WaterReservoir> reservoirs = mainGraph.getWaterReservoirs();
 
-    for (const auto& source : reservoirs) {
-        for (const auto& sink : deliverySites) {
-            double flow = Graph::edmondsKarp(source.second, sink.second, mainGraph);
-            if (maxFlows.find(sink.first) == maxFlows.end() || flow > maxFlows[sink.first]) {
-                maxFlows[sink.first] = flow;
+    if(city.empty()) {
+        for (const auto& source : reservoirs) {
+            for (const auto& sink : deliverySites) {
+                double flow = Graph::edmondsKarp(source.second, sink.second, mainGraph);
+                if (maxFlows.find(sink.first) == maxFlows.end() || flow > maxFlows[sink.first]) {
+                    maxFlows[sink.first] = flow;
+                }
+            }
+        }
+    } else {
+        for (const auto& source : reservoirs) {
+            double flow = Graph::edmondsKarp(source.second, deliverySites.at(city), mainGraph);
+            if (maxFlows.find(city) == maxFlows.end() || flow > maxFlows[city]) {
+                maxFlows[city] = flow;
             }
         }
     }
+
+
     return maxFlows;
 
 

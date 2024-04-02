@@ -296,6 +296,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled2.dir\build.make CMakeFiles/untitled2.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/menu.obj: src/menu.cpp.obj
+.PHONY : src/menu.obj
+
+# target to build an object file
+src/menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled2.dir\build.make CMakeFiles/untitled2.dir/src/menu.cpp.obj
+.PHONY : src/menu.cpp.obj
+
+src/menu.i: src/menu.cpp.i
+.PHONY : src/menu.i
+
+# target to preprocess a source file
+src/menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled2.dir\build.make CMakeFiles/untitled2.dir/src/menu.cpp.i
+.PHONY : src/menu.cpp.i
+
+src/menu.s: src/menu.cpp.s
+.PHONY : src/menu.s
+
+# target to generate assembly for a file
+src/menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled2.dir\build.make CMakeFiles/untitled2.dir/src/menu.cpp.s
+.PHONY : src/menu.cpp.s
+
 src/waterNeeds.obj: src/waterNeeds.cpp.obj
 .PHONY : src/waterNeeds.obj
 
@@ -350,6 +374,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/menu.obj
+	@echo ... src/menu.i
+	@echo ... src/menu.s
 	@echo ... src/waterNeeds.obj
 	@echo ... src/waterNeeds.i
 	@echo ... src/waterNeeds.s
