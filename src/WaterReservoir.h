@@ -138,7 +138,7 @@ public:
      *
      * Time Complexity: O(1)
      */
-    void setMaxDelivery(int d);
+    void setMaxDelivery(double d);
 };
 
 

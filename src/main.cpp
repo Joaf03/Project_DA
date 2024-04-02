@@ -36,4 +36,7 @@ int main(){
     std::vector<std::pair<std::string, double>> result = waterNeeds::citiesWithDeficit(mainGraph);
     for(auto &city: result) cout << city.first << " " << city.second << '\n';
 
+    auto res = waterNeeds::maxFlow(mainGraph);
+    for(auto &city: res) cout << city.first << " " << city.second << '\n';
+
 }

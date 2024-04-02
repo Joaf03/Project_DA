@@ -23,7 +23,7 @@ double Pipeline::getCapacity() const {
 }
 
 bool Pipeline::isBidirectional() const {
-    return is_bidirectional;
+    return !is_bidirectional;
 }
 
 void Pipeline::setSource(string s) {

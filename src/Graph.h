@@ -3,6 +3,7 @@
 
 using namespace std;
 #include <unordered_map>
+#include <set>
 #include "WaterReservoir.h"
 #include "PumpingStation.h"
 #include "DeliverySite.h"
@@ -31,6 +32,7 @@ private:
     unordered_map<string, PumpingStation> pumpingStations;     /**< Map storing pumping stations by their code. */
     unordered_map<string, DeliverySite> deliverySites;         /**< Map storing delivery sites by their code. */
     vector<Pipeline> pipelines;                                 /**< Vector storing pipelines. */
+    static double bfs(WaterReservoir s, DeliverySite t, Graph& mainGraph, vector<string>& path, set<vector<string>>& foundPaths);  // Add this line
 
 public:
     /**
@@ -81,7 +83,13 @@ public:
      */
     void addPipelines(const vector<Pipeline>& pipes) {
         for (const auto& pipe : pipes) {
+            Pipeline auxPipe = pipe;
             pipelines.push_back(pipe);
+            if(pipe.isBidirectional()) {
+                auxPipe.setSource(pipe.getTarget());
+                auxPipe.setTarget(pipe.getSource());
+                pipelines.push_back(auxPipe);
+            }
         }
     }
 
@@ -128,6 +136,8 @@ public:
     vector<Pipeline> getPipelines() const {
         return pipelines;
     }
+
+    static double edmondsKarp(WaterReservoir s, DeliverySite t, Graph& mainGraph);
 };
 
 

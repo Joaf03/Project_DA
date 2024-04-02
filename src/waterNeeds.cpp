@@ -1,5 +1,9 @@
 #include "waterNeeds.h"
 #include "unordered_map"
+#include <string>
+#include <vector>
+
+using namespace std;
 
 std::vector<std::pair<std::string, double>> waterNeeds::citiesWithDeficit(Graph mainGraph) {
     std::vector<std::pair<std::string, double>> citiesWithDeficit;
@@ -29,4 +33,26 @@ std::vector<std::pair<std::string, double>> waterNeeds::citiesWithDeficit(Graph 
     }
 
     return citiesWithDeficit;
+}
+
+unordered_map<string, double> waterNeeds::maxFlow(Graph mainGraph) {
+    // this function should get the maxFlows using the Edmonds-Karp algorithm implemented in the Graph.cpp file
+    unordered_map<string, double> maxFlows;
+    unordered_map<string, DeliverySite> deliverySites = mainGraph.getDeliverySites();
+    unordered_map<string, WaterReservoir> reservoirs = mainGraph.getWaterReservoirs();
+
+    for (const auto& source : reservoirs) {
+        for (const auto& sink : deliverySites) {
+            double flow = Graph::edmondsKarp(source.second, sink.second, mainGraph);
+            if (maxFlows.find(sink.first) == maxFlows.end() || flow > maxFlows[sink.first]) {
+                maxFlows[sink.first] = flow;
+            }
+        }
+    }
+    return maxFlows;
+
+
+
+
+
 }
