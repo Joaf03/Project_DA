@@ -1,0 +1,10 @@
+# ninja log v5
+1789	2363	7334395136826744	untitled2.exe	2e56e7172af6957c
+42	1290	7334391989027947	CMakeFiles/untitled2.dir/src/WaterReservoir.cpp.obj	6587919c274c2ead
+120	1621	7334391992900645	CMakeFiles/untitled2.dir/src/Graph.cpp.obj	491033f4210b6685
+5	2606	7334392002462233	CMakeFiles/untitled2.dir/src/main.cpp.obj	4d52de87a16a9e73
+24	1301	7334391989363306	CMakeFiles/untitled2.dir/src/PumpingStation.cpp.obj	aced87a381f9b218
+96	1280	7334391988275216	CMakeFiles/untitled2.dir/src/Pipeline.cpp.obj	67ed2ea57ddc4b06
+74	2126	7334391997939136	CMakeFiles/untitled2.dir/src/DataLoader.cpp.obj	5b775fef09c9bc03
+58	1296	7334391989040137	CMakeFiles/untitled2.dir/src/DeliverySite.cpp.obj	469b43d14bc3ef0a
+7	1787	7334395131368506	CMakeFiles/untitled2.dir/src/waterNeeds.cpp.obj	5ee3ddb50b45adec

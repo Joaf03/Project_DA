@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.23"
+						"string" : "3.27"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "untitled2",
+					"name" : "Project_DA",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "untitled2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-untitled2-Debug-bca418c1988571c7fde9.json",
-					"name" : "untitled2",
+					"id" : "Project_DA::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Project_DA-Debug-14a3f1dde2232785a7a5.json",
+					"name" : "Project_DA",
 					"projectIndex" : 0
 				}
 			]
