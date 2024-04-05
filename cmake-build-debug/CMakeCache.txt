@@ -157,7 +157,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project_DA
+CMAKE_PROJECT_NAME:STATIC=untitled2
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/ranlib.exe
@@ -250,6 +250,15 @@ Project_DA_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Project_DA_SOURCE_DIR:STATIC=C:/Users/User/Desktop/feup/da/Project_DA
+
+//Value Computed by CMake
+untitled2_BINARY_DIR:STATIC=C:/Users/User/Desktop/feup/da/Project_DA/cmake-build-debug
+
+//Value Computed by CMake
+untitled2_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+untitled2_SOURCE_DIR:STATIC=C:/Users/User/Desktop/feup/da/Project_DA
 
 
 ########################

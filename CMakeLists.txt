@@ -1,16 +1,10 @@
-cmake_minimum_required(VERSION 3.27)
-project(Project_DA)
+cmake_minimum_required(VERSION 3.23)
+project(untitled2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(src)
-
-add_executable(Project_DA
-        src/Graph.cpp
-        src/Graph.h
-        src/main.cpp
-        src/menu.cpp
-        src/Pipeline.cpp
-        src/Pipeline.h
+add_executable(untitled2 src/main.cpp src/WaterReservoir.h src/WaterReservoir.cpp src/PumpingStation.cpp src/PumpingStation.h src/DeliverySite.cpp src/DeliverySite.h src/Pipeline.cpp src/Pipeline.h src/Graph.cpp src/Graph.h src/DataLoader.cpp src/DataLoader.h
+        src/waterNeeds.h
         src/waterNeeds.cpp
-        src/waterNeeds.h)
+        src/menu.h
+        src/menu.cpp)
