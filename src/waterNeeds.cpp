@@ -80,7 +80,7 @@ void waterNeeds::balanceLoad(Graph &mainGraph) {
     }
     var /= differences.size();
 
-    cout << "Initial metrics:\n";
+    cout << "\nInitial metrics:\n";
     cout << "\tAverage: " << avgDiff << "\n";
     cout << "\tVariance: " << var << "\n";
     cout << "\tMax difference: " << maxDiff << "\n";
@@ -118,7 +118,7 @@ void waterNeeds::balanceLoad(Graph &mainGraph) {
     }
     var /= differences.size();
 
-    cout << "Metrics after balancing:\n";
+    cout << "\nMetrics after balancing:\n";
     cout << "\tAverage: " << avgDiff << "\n";
     cout << "\tVariance: " << var << "\n";
     cout << "\tMax difference: " << maxDiff << "\n";
