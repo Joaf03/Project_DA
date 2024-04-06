@@ -133,8 +133,8 @@ public:
      *
      * Time Complexity: O(1)
      */
-    vector<Pipeline>& getPipelines() const {
-        return (vector<Pipeline> &) pipelines;
+    vector<Pipeline>& getPipelines() {
+        return pipelines;
     }
 
     static double edmondsKarp(WaterReservoir s, DeliverySite t, Graph& mainGraph);

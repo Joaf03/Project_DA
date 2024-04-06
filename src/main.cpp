@@ -40,50 +40,48 @@ int main(){
     waterNeeds::maxFlow(mainGraph);
     // for(auto &city: res) cout << city.first << " " << city.second << '\n';
 
-    for(auto &pipe: mainGraph.getPipelines()) cout << pipe.getSource() << " -> " << pipe.getTarget() << ": " << pipe.getFlow() << endl;
-
     int filter;
     int again = 1;
 
     while (again == 1) {
 
-        std::cout << std::endl;
+        cout << endl;
         menu::Menu(); //Call menu
 
-        std::cout << "Please choose the option you prefer by writing the number that corresponds to it and then pressing return: " << std::endl;
-        std::cin >> filter;
+        cout << "Please choose the option you prefer by writing the number that corresponds to it and then pressing return: " << endl;
+        cin >> filter;
 
         if (filter == 1) {
 
             int userInput;
-            std::cout << "Do you want to determine the maximum amount of water that can reach each or a specific city?: " << std::endl;
-            std::cout << "1. Each City" << std::endl;
-            std::cout << "2. Specific CIty" << std::endl;
-            std::cin >> userInput;
+            cout << "Do you want to determine the maximum amount of water that can reach each or a specific city?: " << endl;
+            cout << "1. Each City" << endl;
+            cout << "2. Specific CIty" << endl;
+            cin >> userInput;
             if(userInput == 1) {
                 auto res = waterNeeds::maxFlow(mainGraph);
-                std::cout << "This is the maximum flow of water: " << std::endl;
-                std::cout << "City Code" << " | " << "Maximum Flow" << '\n';
+                cout << "This is the maximum flow of water: " << endl;
+                cout << "City Code" << " | " << "Maximum Flow" << '\n';
                 for(auto &city: res) cout << city.first << " | " << city.second << '\n';
 
             } else {
-                std::string city;
-                std::cout << "Enter the city code you want to determine the maximum amount of water that can reach it: ";
-                std::cin >> city;
+                string city;
+                cout << "Enter the city code you want to determine the maximum amount of water that can reach it: ";
+                cin >> city;
                 auto result = waterNeeds::maxFlow(mainGraph, city);
-                std::cout << "This is the maximum flow of water: " << std::endl;
-                std::cout << "City Code" << " | " << "Maximum Flow" << '\n';
+                cout << "This is the maximum flow of water: " << endl;
+                cout << "City Code" << " | " << "Maximum Flow" << '\n';
                 for(auto &cityFlow: result) cout << cityFlow.first << " | " << cityFlow.second << '\n';
             }
 
 
-            std::cout << "\nType 1 to return: ";
-            std::cin >> userInput;
+            cout << "\nType 1 to return: ";
+            cin >> userInput;
 
             // Validate user input if necessary
             while (userInput != 1) {
-                std::cout << "Invalid input. Type 1 to return: ";
-                std::cin >> userInput;
+                cout << "Invalid input. Type 1 to return: ";
+                cin >> userInput;
             }
         }
 
@@ -91,17 +89,17 @@ int main(){
 
             int userInput;
             auto result = waterNeeds::citiesWithDeficit(mainGraph);
-            std::cout << "These cities do not get enough water: " << std::endl;
-            std::cout << "City Code" << " | " << "Deficit" << '\n';
+            cout << "These cities do not get enough water: " << endl;
+            cout << "City Code" << " | " << "Deficit" << '\n';
             for(auto &city: result) cout << city.first << " | " << city.second << '\n';
 
-            std::cout << "\nType 1 to return: ";
-            std::cin >> userInput;
+            cout << "\nType 1 to return: ";
+            cin >> userInput;
 
             // Validate user input if necessary
             while (userInput != 1) {
-                std::cout << "Invalid input. Type 1 to return: ";
-                std::cin >> userInput;
+                cout << "Invalid input. Type 1 to return: ";
+                cin >> userInput;
             }
         }
 
@@ -109,14 +107,14 @@ int main(){
 
             waterNeeds::balanceLoad(mainGraph);
 
-            std::cout << "\nType 1 to return: ";
+            cout << "\nType 1 to return: ";
             int userInput;
-            std::cin >> userInput;
+            cin >> userInput;
 
             // Validate user input if necessary
             while (userInput != 1) {
-                std::cout << "Invalid input. Type 1 to return: ";
-                std::cin >> userInput;
+                cout << "Invalid input. Type 1 to return: ";
+                cin >> userInput;
             }
         }
 
@@ -125,14 +123,14 @@ int main(){
 
             // TO DO
 
-            std::cout << "\nType 1 to return: ";
+            cout << "\nType 1 to return: ";
             int userInput;
-            std::cin >> userInput;
+            cin >> userInput;
 
             // Validate user input if necessary
             while (userInput != 1) {
-                std::cout << "Invalid input. Type 1 to return: ";
-                std::cin >> userInput;
+                cout << "Invalid input. Type 1 to return: ";
+                cin >> userInput;
             }
         }
 
@@ -141,14 +139,14 @@ int main(){
 
             // TO DO
 
-            std::cout << "\nType 1 to return: ";
+            cout << "\nType 1 to return: ";
             int userInput;
-            std::cin >> userInput;
+            cin >> userInput;
 
             // Validate user input if necessary
             while (userInput != 1) {
-                std::cout << "Invalid input. Type 1 to return: ";
-                std::cin >> userInput;
+                cout << "Invalid input. Type 1 to return: ";
+                cin >> userInput;
             }
         }
 
@@ -157,21 +155,21 @@ int main(){
 
             // TO DO
 
-            std::cout << "\nType 1 to return: ";
+            cout << "\nType 1 to return: ";
             int userInput;
-            std::cin >> userInput;
+            cin >> userInput;
 
             // Validate user input if necessary
             while (userInput != 1) {
-                std::cout << "Invalid input. Type 1 to return: ";
-                std::cin >> userInput;
+                cout << "Invalid input. Type 1 to return: ";
+                cin >> userInput;
             }
 
         }
 
         //END THE PROGRAM
         if (filter == 0) {
-            std::cout << "Thank you!";
+            cout << "Thank you!";
             again = 0;
         }
     }

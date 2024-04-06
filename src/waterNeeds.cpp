@@ -36,7 +36,7 @@ vector<pair<string, double>> waterNeeds::citiesWithDeficit(Graph mainGraph) {
     return citiesWithDeficit;
 }
 
-unordered_map<string, double> waterNeeds::maxFlow(Graph mainGraph, const string& city) {
+unordered_map<string, double> waterNeeds::maxFlow(Graph &mainGraph, const string& city) {
 
     unordered_map<string, double> maxFlows;
     unordered_map<string, DeliverySite> deliverySites = mainGraph.getDeliverySites();
@@ -59,24 +59,20 @@ unordered_map<string, double> waterNeeds::maxFlow(Graph mainGraph, const string&
             }
         }
     }
-
     return maxFlows;
 }
 
-void waterNeeds::balanceLoad(Graph mainGraph) {
-    vector<Pipeline> pipelines = mainGraph.getPipelines();
+void waterNeeds::balanceLoad(Graph &mainGraph) {
+    vector<Pipeline>& pipelines = mainGraph.getPipelines();
     vector<double> differences;
     double sumDiff = 0;
     double maxDiff = 0;
-    int n = 0;
-    for (auto pipe : pipelines){
-        cout << "Flow: " << pipe.getFlow() << endl;
+    for (auto& pipe : pipelines){
         double diff = pipe.getCapacity() - pipe.getFlow();
         differences.push_back(diff);
         if(diff > maxDiff) maxDiff = diff;
         sumDiff += diff;
     }
-
     double avgDiff = sumDiff / differences.size();
     double var = 0;
     for (auto val : differences) {
@@ -88,7 +84,7 @@ void waterNeeds::balanceLoad(Graph mainGraph) {
     cout << "\tAverage: " << avgDiff << "\n";
     cout << "\tVariance: " << var << "\n";
     cout << "\tMax difference: " << maxDiff << "\n";
-    
+
     double totalCapacity = 0, totalFlow = 0;
     for(auto pipe: pipelines){
         totalCapacity += pipe.getCapacity();
@@ -97,28 +93,27 @@ void waterNeeds::balanceLoad(Graph mainGraph) {
 
     double avgFlow = totalFlow / pipelines.size();
 
-    for(auto pipe: pipelines){
-        double proportionalFlow = (pipe.getCapacity() / totalCapacity) * totalFlow;
-        if(proportionalFlow > pipe.getFlow()){
-            double additionalFlow = min(proportionalFlow - pipe.getFlow(), totalCapacity - totalFlow);
-            cout << "Additional flow: " << additionalFlow << "\n\n";
+    for(auto& pipe: pipelines){
+        if(pipe.getFlow() < avgFlow && totalFlow < totalCapacity){
+            double additionalFlow = (double)((int)min(avgFlow - pipe.getFlow(), totalCapacity - totalFlow));
             pipe.setFlow(pipe.getFlow() + additionalFlow);
             totalFlow += additionalFlow;
         }
     }
 
+
     differences.clear();
+    maxDiff = 0;
     sumDiff = 0;
     for (auto& pipe : pipelines){
         double diff = pipe.getCapacity() - pipe.getFlow();
         differences.push_back(diff);
-        if(diff > maxDiff) pipe.setCapacity(pipe.getCapacity() - diff);
+        if(diff > maxDiff) maxDiff = diff;
         sumDiff += diff;
     }
-
     avgDiff = sumDiff / differences.size();
     var = 0;
-    for (auto& val : differences) {
+    for (auto val : differences) {
         var += (val - avgDiff) * (val - avgDiff);
     }
     var /= differences.size();

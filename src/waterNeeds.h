@@ -13,8 +13,8 @@ class waterNeeds {
 
 public:
     static vector<pair<string, double>> citiesWithDeficit(Graph mainGraph);
-    static unordered_map<string, double> maxFlow(Graph mainGraph, const string& city = "");
-    static void balanceLoad(Graph mainGraph);
+    static unordered_map<string, double> maxFlow(Graph &mainGraph, const string& city = "");
+    static void balanceLoad(Graph &mainGraph);
 };
 
 
