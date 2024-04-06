@@ -58,10 +58,10 @@ double Graph::edmondsKarp(WaterReservoir s, DeliverySite t, Graph& mainGraph) {
         while (cur != s.getCode()) {
             for (auto& pipe : mainGraph.getPipelines()) {
                 if (pipe.getSource() == path.back() && pipe.getTarget() == cur) {
-                    pipe.setFlow(pipe.getFlow() - bfs_result);
+                    pipe.setFlow(pipe.getFlow() + bfs_result);
                 }
                 if (pipe.getSource() == cur && pipe.getTarget() == path.back()) {
-                    pipe.setFlow(pipe.getFlow() + bfs_result);
+                    pipe.setFlow(pipe.getFlow() - bfs_result);
                 }
             }
             cur = path.back();

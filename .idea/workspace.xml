@@ -20,18 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2999475-a757-47a0-89c5-f61e2c0370a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled2.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/waterNeeds.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/waterNeeds.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/waterNeeds.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/waterNeeds.h" afterDir="false" />
-    </list>
+    <list default="true" id="b2999475-a757-47a0-89c5-f61e2c0370a4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +97,7 @@
       <workItem from="1712133226533" duration="1415000" />
       <workItem from="1712169516382" duration="947000" />
       <workItem from="1712303509727" duration="6555000" />
-      <workItem from="1712421781554" duration="2085000" />
+      <workItem from="1712421781554" duration="2492000" />
     </task>
     <servers />
   </component>
