@@ -32,7 +32,7 @@ private:
     unordered_map<string, PumpingStation> pumpingStations;     /**< Map storing pumping stations by their code. */
     unordered_map<string, DeliverySite> deliverySites;         /**< Map storing delivery sites by their code. */
     vector<Pipeline> pipelines;                                 /**< Vector storing pipelines. */
-    static double bfs(WaterReservoir s, DeliverySite t, Graph& mainGraph, vector<string>& path, set<vector<string>>& foundPaths);  // Add this line
+    static vector<double> bfs(const WaterReservoir& s, const DeliverySite& t, Graph& mainGraph, vector<vector<string>>& allPaths);  // Add this line
 
 public:
     /**
@@ -137,9 +137,11 @@ public:
         return pipelines;
     }
 
-    static double edmondsKarp(WaterReservoir s, DeliverySite t, Graph& mainGraph);
+    static double edmondsKarp(const DeliverySite& t, Graph& mainGraph);
 
     static unordered_map<string, vector<pair<string, double>>> pipeAffectedCities(Graph& mainGraph);
+
+    static unordered_map<string, vector<pair<string, double>>> pumpAffectedCities(Graph &mainGraph);
 };
 
 
