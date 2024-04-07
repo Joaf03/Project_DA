@@ -19,9 +19,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2999475-a757-47a0-89c5-f61e2c0370a4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/_data_loader_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/_data_loader_8h_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/_delivery_site_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/_delivery_site_8h_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/_graph_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/_graph_8h_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/_pipeline_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/_pipeline_8h_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/_pumping_station_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/_pumping_station_8h_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/_water_reservoir_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/_water_reservoir_8h_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/class_data_loader.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/class_data_loader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/class_delivery_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/class_delivery_site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/class_graph-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/class_graph-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/class_graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/class_graph.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/class_pipeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/class_pipeline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/class_pumping_station.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/class_pumping_station.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/class_water_reservoir.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/class_water_reservoir.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/classmenu-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/classmenu-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/classmenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/classmenu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/classwater_needs.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/classwater_needs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/dir_3001043f5aa3dd8d9dc6cf82d122460c.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/dir_3001043f5aa3dd8d9dc6cf82d122460c.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/dir_4cbba66a7528778f3677f140ded65f16.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/dir_4cbba66a7528778f3677f140ded65f16.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/dir_9cbe2a5212c0431497923ecda22a299f.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/dir_9cbe2a5212c0431497923ecda22a299f.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/dir_c61319bf088383ab6ff1081a1e8d026f.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/dir_c61319bf088383ab6ff1081a1e8d026f.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/dir_ca9f19f803d249dd09bdfa12835eea5a.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/dir_ca9f19f803d249dd09bdfa12835eea5a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/dir_d522931ffa1371640980b621734a4381.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/dir_d522931ffa1371640980b621734a4381.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/doxygen_crawl.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/doxygen_crawl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/files.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/files.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/functions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/functions_func.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/functions_func.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/menu_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/menu_8h_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/menudata.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/menudata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/all_0.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/all_0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/all_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/all_3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/all_4.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/all_4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/all_5.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/all_5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/all_8.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/all_8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/all_9.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/all_9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/all_b.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/all_b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/functions_0.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/functions_0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/functions_4.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/functions_4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/functions_8.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/functions_8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/functions_9.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/functions_9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/functions_b.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/functions_b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/search/searchdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/search/searchdata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/html/water_needs_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/html/water_needs_8h_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/_data_loader_8h_source.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/_data_loader_8h_source.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/_delivery_site_8h_source.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/_delivery_site_8h_source.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/_graph_8h_source.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/_graph_8h_source.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/_pipeline_8h_source.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/_pipeline_8h_source.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/_pumping_station_8h_source.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/_pumping_station_8h_source.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/_water_reservoir_8h_source.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/_water_reservoir_8h_source.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/class_data_loader.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/class_data_loader.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/class_delivery_site.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/class_delivery_site.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/class_graph.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/class_graph.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/class_pipeline.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/class_pipeline.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/class_pumping_station.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/class_pumping_station.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/class_water_reservoir.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/class_water_reservoir.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/classmenu.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/classmenu.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/classwater_needs.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/classwater_needs.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/files.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/files.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/menu_8h_source.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/menu_8h_source.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/refman.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/refman.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doxygen/latex/water_needs_8h_source.tex" beforeDir="false" afterPath="$PROJECT_DIR$/doxygen/latex/water_needs_8h_source.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/waterNeeds.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/waterNeeds.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,29 +116,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C/C++ File.main.cpp.executor": "Run",
-    "CMake Application.Project_DA.executor": "Run",
-    "CMake Application.untitled2.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "t3.3",
-    "last_opened_file_path": "C:/Users/User/Desktop/feup/da/Project_DA/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.Project_DA.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.untitled2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;t3.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/feup/da/Project_DA/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\feup\da\Project_DA\src" />
@@ -105,7 +170,7 @@
       <workItem from="1712169516382" duration="947000" />
       <workItem from="1712303509727" duration="6555000" />
       <workItem from="1712421781554" duration="11150000" />
-      <workItem from="1712497671052" duration="10581000" />
+      <workItem from="1712497671052" duration="17505000" />
     </task>
     <servers />
   </component>

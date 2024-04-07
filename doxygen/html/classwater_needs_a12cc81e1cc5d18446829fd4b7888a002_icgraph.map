@@ -1,0 +1,6 @@
+<map id="waterNeeds::citiesWithDeficit" name="waterNeeds::citiesWithDeficit">
+<area shape="rect" id="Node000001" title="Determines the cities with water deficit." alt="" coords="103,29,294,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="227,16,217,10,198,8,181,10,172,15,169,20,174,28,169,30,164,21,168,11,179,5,198,3,219,5,229,12"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>

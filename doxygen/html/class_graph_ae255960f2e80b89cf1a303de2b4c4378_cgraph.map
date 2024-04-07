@@ -1,0 +1,13 @@
+<map id="Graph::pumpAffectedCities" name="Graph::pumpAffectedCities">
+<area shape="rect" id="Node000001" title="Determines the cities affected by a pump failure." alt="" coords="5,5,182,32"/>
+<area shape="rect" id="Node000002" href="$class_graph.html#a940033743c16aeedc551c5d9a36e9757" title="Retrieves all water reservoirs stored in the graph." alt="" coords="632,5,810,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,14,367,12,584,12,617,13,617,18,584,17,367,17,182,19"/>
+<area shape="rect" id="Node000003" href="$classwater_needs.html#ae604cf24c6562a2f28315915eb67c2c4" title="Determines the maximum flow that can be sent to each or a specific delivery site." alt="" coords="230,31,379,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,27,215,31,214,36,182,32"/>
+<area shape="poly" id="edge6_Node000003_Node000002" title=" " alt="" coords="379,37,617,22,617,28,379,42"/>
+<area shape="rect" id="Node000004" href="$class_graph.html#a445b2b11db677ca01bf95a67c7b398a9" title="Runs the Edmonds&#45;Karp algorithm to find the maximum flow from a water reservoir to a delivery site." alt="" coords="434,56,578,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="380,51,418,56,418,61,379,56"/>
+<area shape="rect" id="Node000005" href="$class_graph.html#a963543151f4da427c78de33dec1f02ac" title="Retrieves all delivery sites stored in the graph." alt="" coords="427,107,584,133"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="338,55,428,92,446,99,445,104,426,97,336,60"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="565,53,646,34,647,39,566,58"/>
+</map>

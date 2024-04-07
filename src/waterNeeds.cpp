@@ -43,17 +43,19 @@ unordered_map<string, double> waterNeeds::maxFlow(Graph &mainGraph, const string
     unordered_map<string, WaterReservoir> reservoirs = mainGraph.getWaterReservoirs();
 
     if(city.empty()) {
-        for (const auto& source : reservoirs) {
-            for (const auto& sink : deliverySites) {
-                double flow = Graph::edmondsKarp(source.second, sink.second, mainGraph);
-                if (maxFlows.find(sink.first) == maxFlows.end() || flow > maxFlows[sink.first]) {
+        for (const auto& sink : deliverySites) {
+            double flow = Graph::edmondsKarp(sink.second, mainGraph);
+            if (maxFlows.find(sink.first) == maxFlows.end() || flow > maxFlows[sink.first]) {
+                if(flow >= sink.second.getDemand()) {
+                    maxFlows[sink.first] = sink.second.getDemand();
+                } else {
                     maxFlows[sink.first] = flow;
                 }
             }
         }
     } else {
         for (const auto& source : reservoirs) {
-            double flow = Graph::edmondsKarp(source.second, deliverySites.at(city), mainGraph);
+            double flow = Graph::edmondsKarp(deliverySites.at(city), mainGraph);
             if (maxFlows.find(city) == maxFlows.end() || flow > maxFlows[city]) {
                 maxFlows[city] = flow;
             }

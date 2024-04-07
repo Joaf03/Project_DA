@@ -1,21 +1,24 @@
 var indexSectionsWithContent =
 {
-  0: "abcdegilmpsw",
+  0: "abcdegilmpsuw",
   1: "dgmpw",
-  2: "abcdegilmpsw"
+  2: "dgmpw",
+  3: "abcdegilmpsuw"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions"
+  2: "files",
+  3: "functions"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Functions"
+  2: "Files",
+  3: "Functions"
 };
 

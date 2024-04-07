@@ -1,0 +1,15 @@
+<map id="Graph::getPipelines" name="Graph::getPipelines">
+<area shape="rect" id="Node000001" title="Retrieves all pipelines stored in the graph." alt="" coords="342,93,477,120"/>
+<area shape="rect" id="Node000002" href="$classwater_needs.html#aca5ba0362d8007270ebf430386604929" title="Balances the load of the pipelines." alt="" coords="113,5,284,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="368,88,293,53,244,35,246,30,295,48,370,83"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,93,55,120"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="327,100,294,97,198,93,103,97,55,104,55,99,102,92,198,88,294,92,327,94"/>
+<area shape="rect" id="Node000004" href="$classwater_needs.html#a12cc81e1cc5d18446829fd4b7888a002" title="Determines the cities with water deficit." alt="" coords="103,131,294,157"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="328,124,278,133,277,127,327,119"/>
+<area shape="rect" id="Node000005" href="$class_graph.html#ae33fe23c396c13120a6eaee57449fbe8" title="Determines the cities affected by a pipeline failure." alt="" coords="114,181,283,208"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="375,131,337,152,295,172,261,183,259,178,293,167,335,147,373,126"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,40,104,53,73,74,47,95,44,91,70,69,101,48,130,35"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="120,129,54,115,56,109,121,124"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="227,118,217,112,198,109,181,111,172,116,169,121,174,129,169,132,164,122,168,112,179,106,198,104,219,107,229,113"/>
+<area shape="poly" id="edge8_Node000005_Node000003" title=" " alt="" coords="115,178,101,172,67,147,41,122,45,118,71,143,104,167,117,173"/>
+</map>

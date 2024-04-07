@@ -1,0 +1,9 @@
+<map id="Graph::edmondsKarp" name="Graph::edmondsKarp">
+<area shape="rect" id="Node000001" title="Runs the Edmonds&#45;Karp algorithm to find the maximum flow from a water reservoir to a delivery site." alt="" coords="5,56,150,83"/>
+<area shape="rect" id="Node000002" href="$class_delivery_site.html#adc1f2c148541f485b0884c52d9ee851d" title="Getter function to retrieve the code of the delivery site." alt="" coords="208,5,353,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,53,209,34,210,39,135,58"/>
+<area shape="rect" id="Node000003" href="$class_water_reservoir.html#adc98672316f1af10de5da27f5329e52f" title="Getter function to retrieve the code representing the reservoir." alt="" coords="198,56,363,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,67,182,67,182,72,150,72"/>
+<area shape="rect" id="Node000004" href="$class_graph.html#a6b324a86a3f48523ebd733ab454b19fa" title="Retrieves all pipelines stored in the graph." alt="" coords="213,107,348,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="135,81,210,100,209,105,133,86"/>
+</map>

@@ -9,6 +9,15 @@ The \doxylink{class_graph}{Graph} class represents a network graph consisting of
 
 {\ttfamily \#include $<$Graph.\+h$>$}
 
+
+
+Collaboration diagram for Graph\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_graph__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,12 +36,18 @@ unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_pumping_station}{Pumping\+S
 unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_delivery_site}{Delivery\+Site}} $>$ \mbox{\hyperlink{class_graph_a963543151f4da427c78de33dec1f02ac}{get\+Delivery\+Sites}} () const
 \begin{DoxyCompactList}\small\item\em Retrieves all delivery sites stored in the graph. \end{DoxyCompactList}\item 
 vector$<$ \mbox{\hyperlink{class_pipeline}{Pipeline}} $>$ \& \mbox{\hyperlink{class_graph_a6b324a86a3f48523ebd733ab454b19fa}{get\+Pipelines}} ()
-\begin{DoxyCompactList}\small\item\em Retrieves all pipelines stored in the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves all pipelines stored in the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a1bb0648a0dba3e9d99001554eba9423f}{update\+Water\+Reservoirs}} (const unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_water_reservoir}{Water\+Reservoir}} $>$ \&reservoirs)
+\begin{DoxyCompactList}\small\item\em Updates the water reservoirs stored in the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static double \mbox{\hyperlink{class_graph_ab3dd83ab01544e1e5511f6c72ca1fe6e}{edmonds\+Karp}} (\mbox{\hyperlink{class_water_reservoir}{Water\+Reservoir}} s, \mbox{\hyperlink{class_delivery_site}{Delivery\+Site}} t, \mbox{\hyperlink{class_graph}{Graph}} \&main\+Graph)
+static double \mbox{\hyperlink{class_graph_a445b2b11db677ca01bf95a67c7b398a9}{edmonds\+Karp}} (const \mbox{\hyperlink{class_delivery_site}{Delivery\+Site}} \&t, \mbox{\hyperlink{class_graph}{Graph}} \&main\+Graph)
 \begin{DoxyCompactList}\small\item\em Runs the Edmonds-\/\+Karp algorithm to find the maximum flow from a water reservoir to a delivery site. \end{DoxyCompactList}\item 
+static unordered\+\_\+map$<$ string, double $>$ \mbox{\hyperlink{class_graph_a2cea5e12b10f3bf977a334b87f8f862c}{affected\+Cities\+After\+Reservoir\+Removal}} (\mbox{\hyperlink{class_graph}{Graph}} \&main\+Graph, const string \&removed\+Reservoir)
+\begin{DoxyCompactList}\small\item\em Determines the cities affected by the removal of a water reservoir. \end{DoxyCompactList}\item 
+static unordered\+\_\+map$<$ string, vector$<$ pair$<$ string, double $>$ $>$ $>$ \mbox{\hyperlink{class_graph_ae255960f2e80b89cf1a303de2b4c4378}{pump\+Affected\+Cities}} (\mbox{\hyperlink{class_graph}{Graph}} \&main\+Graph)
+\begin{DoxyCompactList}\small\item\em Determines the cities affected by a pump failure. \end{DoxyCompactList}\item 
 static unordered\+\_\+map$<$ string, vector$<$ pair$<$ string, double $>$ $>$ $>$ \mbox{\hyperlink{class_graph_ae33fe23c396c13120a6eaee57449fbe8}{pipe\+Affected\+Cities}} (\mbox{\hyperlink{class_graph}{Graph}} \&main\+Graph, vector$<$ \mbox{\hyperlink{class_pipeline}{Pipeline}} $>$ pipelines=\{\})
 \begin{DoxyCompactList}\small\item\em Determines the cities affected by a pipeline failure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -54,8 +69,9 @@ Time Complexity\+:
 \item Getting pipelines\+: O(1)
 \item BFS\+: O(V+E)
 \item Edmonds-\/\+Karp algorithm\+: O(\+VE\texorpdfstring{$^\wedge$}{\string^}2)
-\item Determining cities affected by ruptured pipelines\+: O(\+VE\texorpdfstring{$^\wedge$}{\string^}3)
-\item Balancing load\+: O(\+R\texorpdfstring{$\ast$}{*}\+C\texorpdfstring{$\ast$}{*}\+V\texorpdfstring{$\ast$}{*}\+E\texorpdfstring{$^\wedge$}{\string^}2) 
+\item Updating water reservoirs\+: O(n)
+\item Determining cities affected by removed reservoir\+: O(\+C\texorpdfstring{$\ast$}{*}\+VE\texorpdfstring{$^\wedge$}{\string^}2)
+\item Determining cities affected by ruptured pipelines\+: O(\+VE\texorpdfstring{$^\wedge$}{\string^}3) 
 \end{DoxyItemize}
 
 \doxysubsection{Member Function Documentation}
@@ -74,7 +90,14 @@ Adds a vector of delivery sites to the graph.
 {\em sites} & Vector of delivery sites to be added.\\
 \hline
 \end{DoxyParams}
-Time Complexity\+: O(n), where n is the number of delivery sites to be added. \Hypertarget{class_graph_a27837dffd53acf771d2ffa8be3a7c360}\label{class_graph_a27837dffd53acf771d2ffa8be3a7c360} 
+Time Complexity\+: O(n), where n is the number of delivery sites to be added. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{class_graph_af6a6a9786dd3c25746ad4fb4cabc1b94_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_a27837dffd53acf771d2ffa8be3a7c360}\label{class_graph_a27837dffd53acf771d2ffa8be3a7c360} 
 \index{Graph@{Graph}!addPipelines@{addPipelines}}
 \index{addPipelines@{addPipelines}!Graph@{Graph}}
 \doxysubsubsection{\texorpdfstring{addPipelines()}{addPipelines()}}
@@ -89,7 +112,21 @@ Adds a vector of pipelines to the graph.
 {\em pipes} & Vector of pipelines to be added.\\
 \hline
 \end{DoxyParams}
-Time Complexity\+: O(n), where n is the number of pipelines to be added. \Hypertarget{class_graph_a282644b9d32f4f578f2896ae1cf83bb1}\label{class_graph_a282644b9d32f4f578f2896ae1cf83bb1} 
+Time Complexity\+: O(n), where n is the number of pipelines to be added. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_graph_a27837dffd53acf771d2ffa8be3a7c360_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{class_graph_a27837dffd53acf771d2ffa8be3a7c360_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_a282644b9d32f4f578f2896ae1cf83bb1}\label{class_graph_a282644b9d32f4f578f2896ae1cf83bb1} 
 \index{Graph@{Graph}!addPumpingStations@{addPumpingStations}}
 \index{addPumpingStations@{addPumpingStations}!Graph@{Graph}}
 \doxysubsubsection{\texorpdfstring{addPumpingStations()}{addPumpingStations()}}
@@ -104,7 +141,14 @@ Adds a vector of pumping stations to the graph.
 {\em stations} & Vector of pumping stations to be added.\\
 \hline
 \end{DoxyParams}
-Time Complexity\+: O(n), where n is the number of pumping stations to be added. \Hypertarget{class_graph_af4a1dfc8abb3c89d86554cae3ceffea3}\label{class_graph_af4a1dfc8abb3c89d86554cae3ceffea3} 
+Time Complexity\+: O(n), where n is the number of pumping stations to be added. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_graph_a282644b9d32f4f578f2896ae1cf83bb1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_af4a1dfc8abb3c89d86554cae3ceffea3}\label{class_graph_af4a1dfc8abb3c89d86554cae3ceffea3} 
 \index{Graph@{Graph}!addWaterReservoirs@{addWaterReservoirs}}
 \index{addWaterReservoirs@{addWaterReservoirs}!Graph@{Graph}}
 \doxysubsubsection{\texorpdfstring{addWaterReservoirs()}{addWaterReservoirs()}}
@@ -119,11 +163,45 @@ Adds a vector of water reservoirs to the graph.
 {\em reservoirs} & Vector of water reservoirs to be added.\\
 \hline
 \end{DoxyParams}
-Time Complexity\+: O(n), where n is the number of water reservoirs to be added. \Hypertarget{class_graph_ab3dd83ab01544e1e5511f6c72ca1fe6e}\label{class_graph_ab3dd83ab01544e1e5511f6c72ca1fe6e} 
+Time Complexity\+: O(n), where n is the number of water reservoirs to be added. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_graph_af4a1dfc8abb3c89d86554cae3ceffea3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_a2cea5e12b10f3bf977a334b87f8f862c}\label{class_graph_a2cea5e12b10f3bf977a334b87f8f862c} 
+\index{Graph@{Graph}!affectedCitiesAfterReservoirRemoval@{affectedCitiesAfterReservoirRemoval}}
+\index{affectedCitiesAfterReservoirRemoval@{affectedCitiesAfterReservoirRemoval}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{affectedCitiesAfterReservoirRemoval()}{affectedCitiesAfterReservoirRemoval()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, double $>$ Graph\+::affected\+Cities\+After\+Reservoir\+Removal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}} \&}]{main\+Graph,  }\item[{const string \&}]{removed\+Reservoir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determines the cities affected by the removal of a water reservoir. 
+
+\begin{DoxyReturn}{Returns}
+Unordered map containing the city code and the amount of water it will not receive.
+\end{DoxyReturn}
+Time Complexity\+: O(\+VE\texorpdfstring{$^\wedge$}{\string^}2), where V is the number of vertices in the graph and E is the number of edges. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_a2cea5e12b10f3bf977a334b87f8f862c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{class_graph_a2cea5e12b10f3bf977a334b87f8f862c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_a445b2b11db677ca01bf95a67c7b398a9}\label{class_graph_a445b2b11db677ca01bf95a67c7b398a9} 
 \index{Graph@{Graph}!edmondsKarp@{edmondsKarp}}
 \index{edmondsKarp@{edmondsKarp}!Graph@{Graph}}
 \doxysubsubsection{\texorpdfstring{edmondsKarp()}{edmondsKarp()}}
-{\footnotesize\ttfamily double Graph\+::edmonds\+Karp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_water_reservoir}{Water\+Reservoir}}}]{s,  }\item[{\mbox{\hyperlink{class_delivery_site}{Delivery\+Site}}}]{t,  }\item[{\mbox{\hyperlink{class_graph}{Graph}} \&}]{main\+Graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily double Graph\+::edmonds\+Karp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_delivery_site}{Delivery\+Site}} \&}]{t,  }\item[{\mbox{\hyperlink{class_graph}{Graph}} \&}]{main\+Graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -132,7 +210,21 @@ Runs the Edmonds-\/\+Karp algorithm to find the maximum flow from a water reserv
 \begin{DoxyReturn}{Returns}
 Maximum flow from the water reservoir to the delivery site.
 \end{DoxyReturn}
-Time Complexity\+: O(\+VE\texorpdfstring{$^\wedge$}{\string^}2), where V is the number of vertices in the graph and E is the number of edges. \Hypertarget{class_graph_a963543151f4da427c78de33dec1f02ac}\label{class_graph_a963543151f4da427c78de33dec1f02ac} 
+Time Complexity\+: O(\+VE\texorpdfstring{$^\wedge$}{\string^}2), where V is the number of vertices in the graph and E is the number of edges. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_a445b2b11db677ca01bf95a67c7b398a9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_a445b2b11db677ca01bf95a67c7b398a9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_a963543151f4da427c78de33dec1f02ac}\label{class_graph_a963543151f4da427c78de33dec1f02ac} 
 \index{Graph@{Graph}!getDeliverySites@{getDeliverySites}}
 \index{getDeliverySites@{getDeliverySites}!Graph@{Graph}}
 \doxysubsubsection{\texorpdfstring{getDeliverySites()}{getDeliverySites()}}
@@ -145,7 +237,14 @@ Retrieves all delivery sites stored in the graph.
 \begin{DoxyReturn}{Returns}
 Unordered map containing delivery sites indexed by their code.
 \end{DoxyReturn}
-Time Complexity\+: O(1) \Hypertarget{class_graph_a6b324a86a3f48523ebd733ab454b19fa}\label{class_graph_a6b324a86a3f48523ebd733ab454b19fa} 
+Time Complexity\+: O(1) Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_a963543151f4da427c78de33dec1f02ac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_a6b324a86a3f48523ebd733ab454b19fa}\label{class_graph_a6b324a86a3f48523ebd733ab454b19fa} 
 \index{Graph@{Graph}!getPipelines@{getPipelines}}
 \index{getPipelines@{getPipelines}!Graph@{Graph}}
 \doxysubsubsection{\texorpdfstring{getPipelines()}{getPipelines()}}
@@ -158,7 +257,14 @@ Retrieves all pipelines stored in the graph.
 \begin{DoxyReturn}{Returns}
 Vector containing all pipelines.
 \end{DoxyReturn}
-Time Complexity\+: O(1) \Hypertarget{class_graph_abbffed66daf8ad8f653c38e9336c0a31}\label{class_graph_abbffed66daf8ad8f653c38e9336c0a31} 
+Time Complexity\+: O(1) Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_a6b324a86a3f48523ebd733ab454b19fa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_abbffed66daf8ad8f653c38e9336c0a31}\label{class_graph_abbffed66daf8ad8f653c38e9336c0a31} 
 \index{Graph@{Graph}!getPumpingStations@{getPumpingStations}}
 \index{getPumpingStations@{getPumpingStations}!Graph@{Graph}}
 \doxysubsubsection{\texorpdfstring{getPumpingStations()}{getPumpingStations()}}
@@ -184,7 +290,14 @@ Retrieves all water reservoirs stored in the graph.
 \begin{DoxyReturn}{Returns}
 Unordered map containing water reservoirs indexed by their code.
 \end{DoxyReturn}
-Time Complexity\+: O(1) \Hypertarget{class_graph_ae33fe23c396c13120a6eaee57449fbe8}\label{class_graph_ae33fe23c396c13120a6eaee57449fbe8} 
+Time Complexity\+: O(1) Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_a940033743c16aeedc551c5d9a36e9757_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_ae33fe23c396c13120a6eaee57449fbe8}\label{class_graph_ae33fe23c396c13120a6eaee57449fbe8} 
 \index{Graph@{Graph}!pipeAffectedCities@{pipeAffectedCities}}
 \index{pipeAffectedCities@{pipeAffectedCities}!Graph@{Graph}}
 \doxysubsubsection{\texorpdfstring{pipeAffectedCities()}{pipeAffectedCities()}}
@@ -197,9 +310,72 @@ Determines the cities affected by a pipeline failure.
 \begin{DoxyReturn}{Returns}
 Unordered map containing a vector of pairs of affected cities and the amount of water they will not receive.
 \end{DoxyReturn}
-Time Complexity\+: O(\+VE\texorpdfstring{$^\wedge$}{\string^}3), where V is the number of vertices in the graph and E is the number of edges. 
+Time Complexity\+: O(\+VE\texorpdfstring{$^\wedge$}{\string^}3), where V is the number of vertices in the graph and E is the number of edges. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_ae33fe23c396c13120a6eaee57449fbe8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_graph_ae33fe23c396c13120a6eaee57449fbe8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_ae255960f2e80b89cf1a303de2b4c4378}\label{class_graph_ae255960f2e80b89cf1a303de2b4c4378} 
+\index{Graph@{Graph}!pumpAffectedCities@{pumpAffectedCities}}
+\index{pumpAffectedCities@{pumpAffectedCities}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{pumpAffectedCities()}{pumpAffectedCities()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, vector$<$ pair$<$ string, double $>$ $>$ $>$ Graph\+::pump\+Affected\+Cities (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}} \&}]{main\+Graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determines the cities affected by a pump failure. 
+
+\begin{DoxyReturn}{Returns}
+Unordered map containing the pump code and a vector of pairs of affected cities and the amount of water they will not receive.
+\end{DoxyReturn}
+Time Complexity\+: O(\+Ps\+VE\texorpdfstring{$^\wedge$}{\string^}2)), where Ps is the number of pumping stations, V is the number of vertices in the graph and E is the number of edges. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_ae255960f2e80b89cf1a303de2b4c4378_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_graph_ae255960f2e80b89cf1a303de2b4c4378_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_graph_a1bb0648a0dba3e9d99001554eba9423f}\label{class_graph_a1bb0648a0dba3e9d99001554eba9423f} 
+\index{Graph@{Graph}!updateWaterReservoirs@{updateWaterReservoirs}}
+\index{updateWaterReservoirs@{updateWaterReservoirs}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{updateWaterReservoirs()}{updateWaterReservoirs()}}
+{\footnotesize\ttfamily void Graph\+::update\+Water\+Reservoirs (\begin{DoxyParamCaption}\item[{const unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_water_reservoir}{Water\+Reservoir}} $>$ \&}]{reservoirs }\end{DoxyParamCaption})}
+
+
+
+Updates the water reservoirs stored in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reservoirs} & Map containing the water reservoirs to be updated.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(n), where n is the number of water reservoirs to be updated. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_a1bb0648a0dba3e9d99001554eba9423f_icgraph}
+\end{center}
+\end{figure}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Graph.\+h\item 
-C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Graph.\+cpp\end{DoxyCompactItemize}
+Project\+\_\+\+DA/src/\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+Project\+\_\+\+DA/src/\mbox{\hyperlink{_graph_8cpp}{Graph.\+cpp}}\end{DoxyCompactItemize}

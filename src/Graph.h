@@ -37,7 +37,7 @@ private:
     unordered_map<string, PumpingStation> pumpingStations;     /**< Map storing pumping stations by their code. */
     unordered_map<string, DeliverySite> deliverySites;         /**< Map storing delivery sites by their code. */
     vector<Pipeline> pipelines;                                 /**< Vector storing pipelines. */
-    static double bfs(WaterReservoir s, DeliverySite t, Graph& mainGraph, vector<string>& path, set<vector<string>>& foundPaths);  // Add this line
+    static vector<double> bfs(const WaterReservoir& s, const DeliverySite& t, Graph& mainGraph, vector<vector<string>>& allPaths);
 
 public:
     /**
@@ -149,7 +149,7 @@ public:
      *
      * Time Complexity: O(VE^2), where V is the number of vertices in the graph and E is the number of edges.
      */
-    static double edmondsKarp(WaterReservoir s, DeliverySite t, Graph& mainGraph);
+    static double edmondsKarp(const DeliverySite& t, Graph& mainGraph);
 
     /**
      * @brief Updates the water reservoirs stored in the graph.
@@ -168,6 +168,15 @@ public:
      * Time Complexity: O(VE^2), where V is the number of vertices in the graph and E is the number of edges.
      */
     static unordered_map<string, double> affectedCitiesAfterReservoirRemoval(Graph& mainGraph, const string& removedReservoir);
+
+    /**
+     * @brief Determines the cities affected by a pump failure.
+     *
+     * @return Unordered map containing the pump code and a vector of pairs of affected cities and the amount of water they will not receive.
+     *
+     * Time Complexity: O(PsVE^2)), where Ps is the number of pumping stations, V is the number of vertices in the graph and E is the number of edges.
+     */
+    static unordered_map<string, vector<pair<string, double>>> pumpAffectedCities(Graph &mainGraph);
 
     /**
      * @brief Determines the cities affected by a pipeline failure.

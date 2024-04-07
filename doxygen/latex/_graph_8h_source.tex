@@ -1,6 +1,6 @@
 \doxysection{Graph.\+h}
-\hypertarget{_graph_8h_source}{}\label{_graph_8h_source}\index{C:/Users/User/Desktop/feup/da/Project\_DA/src/Graph.h@{C:/Users/User/Desktop/feup/da/Project\_DA/src/Graph.h}}
-
+\hypertarget{_graph_8h_source}{}\label{_graph_8h_source}\index{Project\_DA/src/Graph.h@{Project\_DA/src/Graph.h}}
+\mbox{\hyperlink{_graph_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UNTITLED2\_GRAPH\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UNTITLED2\_GRAPH\_H}}
@@ -8,74 +8,80 @@
 \DoxyCodeLine{00004\ \textcolor{keyword}{using\ namespace\ }std;}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <set>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}WaterReservoir.h"{}}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}PumpingStation.h"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}DeliverySite.h"{}}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Pipeline.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_water_reservoir_8h}{WaterReservoir.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pumping_station_8h}{PumpingStation.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_delivery_site_8h}{DeliverySite.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pipeline_8h}{Pipeline.h}}"{}}}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph}{Graph}}\ \{}
-\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00035\ \ \ \ \ unordered\_map<string,\ WaterReservoir>\ waterReservoirs;\ \ \ \ }
-\DoxyCodeLine{00036\ \ \ \ \ unordered\_map<string,\ PumpingStation>\ pumpingStations;\ \ \ \ \ }
-\DoxyCodeLine{00037\ \ \ \ \ unordered\_map<string,\ DeliverySite>\ deliverySites;\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00038\ \ \ \ \ vector<Pipeline>\ pipelines;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ bfs(\mbox{\hyperlink{class_water_reservoir}{WaterReservoir}}\ s,\ \mbox{\hyperlink{class_delivery_site}{DeliverySite}}\ t,\ \mbox{\hyperlink{class_graph}{Graph}}\&\ mainGraph,\ vector<string>\&\ path,\ set<vector<string>>\&\ foundPaths);\ \ \textcolor{comment}{//\ Add\ this\ line}}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_af6a6a9786dd3c25746ad4fb4cabc1b94}{addDeliverySites}}(\textcolor{keyword}{const}\ vector<DeliverySite>\&\ sites)\ \{}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ site\ :\ sites)\ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ deliverySites[site.getCode()]\ =\ site;}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00053\ \ \ \ \ \}}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a282644b9d32f4f578f2896ae1cf83bb1}{addPumpingStations}}(\textcolor{keyword}{const}\ vector<PumpingStation>\&\ stations)\ \{}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ station\ :\ stations)\ \{}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ pumpingStations[station.getCode()]\ =\ station;}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00066\ \ \ \ \ \}}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_af4a1dfc8abb3c89d86554cae3ceffea3}{addWaterReservoirs}}(\textcolor{keyword}{const}\ vector<WaterReservoir>\&\ reservoirs)\ \{}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ reservoir\ :\ reservoirs)\ \{}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ waterReservoirs[reservoir.getCode()]\ =\ reservoir;}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00079\ \ \ \ \ \}}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a27837dffd53acf771d2ffa8be3a7c360}{addPipelines}}(\textcolor{keyword}{const}\ vector<Pipeline>\&\ pipes)\ \{}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ pipe\ :\ pipes)\ \{}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pipeline}{Pipeline}}\ auxPipe\ =\ pipe;}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ pipelines.push\_back(pipe);}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(pipe.isBidirectional())\ \{}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ auxPipe.\mbox{\hyperlink{class_pipeline_a3219a5e0ef52b87fe8151019243ab7aa}{setSource}}(pipe.getTarget());}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ auxPipe.\mbox{\hyperlink{class_pipeline_aef18b6d1bf7dde9bbce0f4be4c1a91c6}{setTarget}}(pipe.getSource());}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pipelines.push\_back(auxPipe);}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00098\ \ \ \ \ \}}
-\DoxyCodeLine{00099\ }
-\DoxyCodeLine{00107\ \ \ \ \ unordered\_map<string,\ WaterReservoir>\ \mbox{\hyperlink{class_graph_a940033743c16aeedc551c5d9a36e9757}{getWaterReservoirs}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ waterReservoirs;}
-\DoxyCodeLine{00109\ \ \ \ \ \}}
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00118\ \ \ \ \ unordered\_map<string,\ PumpingStation>\ \mbox{\hyperlink{class_graph_abbffed66daf8ad8f653c38e9336c0a31}{getPumpingStations}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pumpingStations;}
-\DoxyCodeLine{00120\ \ \ \ \ \}}
-\DoxyCodeLine{00121\ }
-\DoxyCodeLine{00129\ \ \ \ \ unordered\_map<string,\ DeliverySite>\ \mbox{\hyperlink{class_graph_a963543151f4da427c78de33dec1f02ac}{getDeliverySites}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ deliverySites;}
-\DoxyCodeLine{00131\ \ \ \ \ \}}
-\DoxyCodeLine{00132\ }
-\DoxyCodeLine{00140\ \ \ \ \ vector<Pipeline>\&\ \mbox{\hyperlink{class_graph_a6b324a86a3f48523ebd733ab454b19fa}{getPipelines}}()\ \{}
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pipelines;}
-\DoxyCodeLine{00142\ \ \ \ \ \}}
-\DoxyCodeLine{00143\ }
-\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_graph_ab3dd83ab01544e1e5511f6c72ca1fe6e}{edmondsKarp}}(\mbox{\hyperlink{class_water_reservoir}{WaterReservoir}}\ s,\ \mbox{\hyperlink{class_delivery_site}{DeliverySite}}\ t,\ \mbox{\hyperlink{class_graph}{Graph}}\&\ mainGraph);}
-\DoxyCodeLine{00152\ }
-\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{static}\ unordered\_map<string,\ vector<pair<string,\ double>>>\ \mbox{\hyperlink{class_graph_ae33fe23c396c13120a6eaee57449fbe8}{pipeAffectedCities}}(\mbox{\hyperlink{class_graph}{Graph}}\&\ mainGraph,\ vector<Pipeline>\ pipelines\ =\ \{\});}
-\DoxyCodeLine{00161\ \};}
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph}{Graph}}\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ unordered\_map<string,\ WaterReservoir>\ waterReservoirs;\ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ unordered\_map<string,\ PumpingStation>\ pumpingStations;\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ unordered\_map<string,\ DeliverySite>\ deliverySites;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ vector<Pipeline>\ pipelines;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ vector<double>\ bfs(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_water_reservoir}{WaterReservoir}}\&\ s,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_delivery_site}{DeliverySite}}\&\ t,\ \mbox{\hyperlink{class_graph}{Graph}}\&\ mainGraph,\ vector<vector<string>>\&\ allPaths);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_af6a6a9786dd3c25746ad4fb4cabc1b94}{addDeliverySites}}(\textcolor{keyword}{const}\ vector<DeliverySite>\&\ sites)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ site\ :\ sites)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ deliverySites[site.getCode()]\ =\ site;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a282644b9d32f4f578f2896ae1cf83bb1}{addPumpingStations}}(\textcolor{keyword}{const}\ vector<PumpingStation>\&\ stations)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ station\ :\ stations)\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ pumpingStations[station.getCode()]\ =\ station;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_af4a1dfc8abb3c89d86554cae3ceffea3}{addWaterReservoirs}}(\textcolor{keyword}{const}\ vector<WaterReservoir>\&\ reservoirs)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ reservoir\ :\ reservoirs)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ waterReservoirs[reservoir.getCode()]\ =\ reservoir;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a27837dffd53acf771d2ffa8be3a7c360}{addPipelines}}(\textcolor{keyword}{const}\ vector<Pipeline>\&\ pipes)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ pipe\ :\ pipes)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pipeline}{Pipeline}}\ auxPipe\ =\ pipe;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ pipelines.push\_back(pipe);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(pipe.isBidirectional())\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ auxPipe.\mbox{\hyperlink{class_pipeline_a3219a5e0ef52b87fe8151019243ab7aa}{setSource}}(pipe.getTarget());}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ auxPipe.\mbox{\hyperlink{class_pipeline_aef18b6d1bf7dde9bbce0f4be4c1a91c6}{setTarget}}(pipe.getSource());}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pipelines.push\_back(auxPipe);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00108\ \ \ \ \ unordered\_map<string,\ WaterReservoir>\ \mbox{\hyperlink{class_graph_a940033743c16aeedc551c5d9a36e9757}{getWaterReservoirs}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ waterReservoirs;}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00119\ \ \ \ \ unordered\_map<string,\ PumpingStation>\ \mbox{\hyperlink{class_graph_abbffed66daf8ad8f653c38e9336c0a31}{getPumpingStations}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pumpingStations;}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00130\ \ \ \ \ unordered\_map<string,\ DeliverySite>\ \mbox{\hyperlink{class_graph_a963543151f4da427c78de33dec1f02ac}{getDeliverySites}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ deliverySites;}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00141\ \ \ \ \ vector<Pipeline>\&\ \mbox{\hyperlink{class_graph_a6b324a86a3f48523ebd733ab454b19fa}{getPipelines}}()\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pipelines;}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_graph_a445b2b11db677ca01bf95a67c7b398a9}{edmondsKarp}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_delivery_site}{DeliverySite}}\&\ t,\ \mbox{\hyperlink{class_graph}{Graph}}\&\ mainGraph);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a1bb0648a0dba3e9d99001554eba9423f}{updateWaterReservoirs}}(\textcolor{keyword}{const}\ unordered\_map<string,\ WaterReservoir>\&\ reservoirs);}
 \DoxyCodeLine{00162\ }
-\DoxyCodeLine{00163\ }
-\DoxyCodeLine{00164\ }
-\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{static}\ unordered\_map<string,\ double>\ \mbox{\hyperlink{class_graph_a2cea5e12b10f3bf977a334b87f8f862c}{affectedCitiesAfterReservoirRemoval}}(\mbox{\hyperlink{class_graph}{Graph}}\&\ mainGraph,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ removedReservoir);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keyword}{static}\ unordered\_map<string,\ vector<pair<string,\ double>>>\ \mbox{\hyperlink{class_graph_ae255960f2e80b89cf1a303de2b4c4378}{pumpAffectedCities}}(\mbox{\hyperlink{class_graph}{Graph}}\ \&mainGraph);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keyword}{static}\ unordered\_map<string,\ vector<pair<string,\ double>>>\ \mbox{\hyperlink{class_graph_ae33fe23c396c13120a6eaee57449fbe8}{pipeAffectedCities}}(\mbox{\hyperlink{class_graph}{Graph}}\&\ mainGraph,\ vector<Pipeline>\ pipelines\ =\ \{\});}
+\DoxyCodeLine{00189\ \};}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

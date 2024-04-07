@@ -139,7 +139,17 @@ int main(){
 
         if (filter == 5) {
 
-            // TO DO
+            auto result = Graph::pumpAffectedCities(mainGraph);
+            if(result.empty()) {
+                cout << "No cities are affected by the removal of any pumping station." << endl;
+            }
+            for(auto &pump: result) {
+                cout << "If the pumping station - " << pump.first << " - is temporarily taken out of service these cities - " << pump.second.size() << " - do not get enough water: " << endl;
+                cout << "City | Deficit" << endl;
+                for(auto &city: pump.second) {
+                    cout << city.first << " | " << city.second << endl;
+                }
+            }
 
             cout << "\nType 1 to return: ";
             int userInput;

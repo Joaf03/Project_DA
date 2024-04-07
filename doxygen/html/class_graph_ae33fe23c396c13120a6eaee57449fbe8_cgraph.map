@@ -1,0 +1,15 @@
+<map id="Graph::pipeAffectedCities" name="Graph::pipeAffectedCities">
+<area shape="rect" id="Node000001" title="Determines the cities affected by a pipeline failure." alt="" coords="5,43,174,69"/>
+<area shape="rect" id="Node000002" href="$class_graph.html#a963543151f4da427c78de33dec1f02ac" title="Retrieves all delivery sites stored in the graph." alt="" coords="419,5,576,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,40,221,28,315,20,403,17,403,22,315,25,222,33,153,45"/>
+<area shape="rect" id="Node000003" href="$class_graph.html#a6b324a86a3f48523ebd733ab454b19fa" title="Retrieves all pipelines stored in the graph." alt="" coords="229,43,364,69"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,53,213,53,213,59,174,59"/>
+<area shape="rect" id="Node000004" href="$classwater_needs.html#ae604cf24c6562a2f28315915eb67c2c4" title="Determines the maximum flow that can be sent to each or a specific delivery site." alt="" coords="222,93,371,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,67,225,86,223,92,147,73"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="341,90,370,79,418,54,452,37,454,42,420,58,372,84,342,95"/>
+<area shape="rect" id="Node000005" href="$class_graph.html#a445b2b11db677ca01bf95a67c7b398a9" title="Runs the Edmonds&#45;Karp algorithm to find the maximum flow from a water reservoir to a delivery site." alt="" coords="426,68,570,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="371,95,410,90,410,95,372,100"/>
+<area shape="rect" id="Node000006" href="$class_graph.html#a940033743c16aeedc551c5d9a36e9757" title="Retrieves all water reservoirs stored in the graph." alt="" coords="624,93,802,120"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="371,104,609,104,609,109,371,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="571,87,609,92,608,97,570,92"/>
+</map>

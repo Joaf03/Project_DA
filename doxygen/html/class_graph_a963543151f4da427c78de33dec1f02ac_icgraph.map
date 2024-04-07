@@ -1,0 +1,22 @@
+<map id="Graph::getDeliverySites" name="Graph::getDeliverySites">
+<area shape="rect" id="Node000001" title="Retrieves all delivery sites stored in the graph." alt="" coords="566,115,724,141"/>
+<area shape="rect" id="Node000002" href="$class_graph.html#a2cea5e12b10f3bf977a334b87f8f862c" title="Determines the cities affected by the removal of a water reservoir." alt="" coords="106,73,276,116"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="551,124,276,104,276,98,551,118"/>
+<area shape="rect" id="Node000004" href="$classwater_needs.html#a12cc81e1cc5d18446829fd4b7888a002" title="Determines the cities with water deficit." alt="" coords="327,29,518,56"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="593,111,459,59,461,54,595,106"/>
+<area shape="rect" id="Node000005" href="$classwater_needs.html#ae604cf24c6562a2f28315915eb67c2c4" title="Determines the maximum flow that can be sent to each or a specific delivery site." alt="" coords="348,140,497,167"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="552,141,498,147,497,142,551,136"/>
+<area shape="rect" id="Node000006" href="$class_graph.html#ae33fe23c396c13120a6eaee57449fbe8" title="Determines the cities affected by a pipeline failure." alt="" coords="107,241,275,268"/>
+<area shape="poly" id="edge13_Node000001_Node000006" title=" " alt="" coords="600,150,519,181,386,217,267,243,266,238,385,212,518,176,598,145"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,140,55,167"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="117,124,56,147,54,142,115,119"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="315,30,263,29,209,33,155,44,104,64,82,80,64,100,40,141,35,138,59,97,78,76,101,59,153,39,208,27,263,24,315,25"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="461,16,448,10,423,8,399,10,387,15,384,20,389,27,385,30,378,21,383,11,398,5,423,3,449,5,463,12"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="352,138,275,119,277,114,353,133"/>
+<area shape="poly" id="edge8_Node000005_Node000003" title=" " alt="" coords="345,173,230,187,166,188,102,181,54,167,56,162,103,176,166,182,230,181,345,167"/>
+<area shape="poly" id="edge9_Node000005_Node000006" title=" " alt="" coords="383,176,280,225,234,243,232,238,278,220,380,172"/>
+<area shape="rect" id="Node000007" href="$class_graph.html#ae255960f2e80b89cf1a303de2b4c4378" title="Determines the cities affected by a pump failure." alt="" coords="103,140,279,167"/>
+<area shape="poly" id="edge11_Node000005_Node000007" title=" " alt="" coords="332,156,279,156,279,151,332,151"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="126,238,101,225,66,197,40,169,44,165,70,193,104,220,128,233"/>
+<area shape="poly" id="edge12_Node000007_Node000003" title=" " alt="" coords="87,156,55,156,55,151,87,151"/>
+</map>
