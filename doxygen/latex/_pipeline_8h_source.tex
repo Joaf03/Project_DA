@@ -1,0 +1,47 @@
+\doxysection{Pipeline.\+h}
+\hypertarget{_pipeline_8h_source}{}\label{_pipeline_8h_source}\index{C:/Users/User/Desktop/feup/da/Project\_DA/src/Pipeline.h@{C:/Users/User/Desktop/feup/da/Project\_DA/src/Pipeline.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PIPELINE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PIPELINE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pipeline}{Pipeline}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{string}\ source;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{string}\ target;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ capacity;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_bidirectional;\ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ flow;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_pipeline_a79e49366358f823b8812658f8bf3a9e8}{Pipeline}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_pipeline_a0fe7779ae59ec3cd61795996d9f3c874}{Pipeline}}(\textcolor{keywordtype}{string}\ source,\ std::string\ target,\ \textcolor{keywordtype}{double}\ capacity,\ \textcolor{keywordtype}{bool}\ is\_bidirectional);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00057\ \ \ \ \ std::string\ \mbox{\hyperlink{class_pipeline_a572200ccac5b14cd96ec1f4288335ad7}{getSource}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00066\ \ \ \ \ std::string\ \mbox{\hyperlink{class_pipeline_a2fa2075a70d5a9570f7a492ab69c14c9}{getTarget}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_pipeline_a54bd329491560e1b3612109df9389a40}{getCapacity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_pipeline_a969a8076f7939c201651188c5c2df2f6}{getFlow}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pipeline_ad416b863c8c229fd44dd755ef80bae29}{isBidirectional}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pipeline_a3219a5e0ef52b87fe8151019243ab7aa}{setSource}}(\textcolor{keywordtype}{string}\ source);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pipeline_aef18b6d1bf7dde9bbce0f4be4c1a91c6}{setTarget}}(\textcolor{keywordtype}{string}\ target);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pipeline_afb4b3839c34cc7b1c3653ca97e1d6590}{setCapacity}}(\textcolor{keywordtype}{double}\ capacity);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pipeline_a2bb185ec32cd38b34ecd4a15fdda29d5}{setBidirectional}}(\textcolor{keywordtype}{bool}\ is\_bidirectional);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pipeline_a1cda31365eac0ef70c04a784dc383bc3}{setFlow}}(\textcolor{keywordtype}{double}\ flow);}
+\DoxyCodeLine{00139\ \};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

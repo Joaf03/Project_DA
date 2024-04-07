@@ -1,0 +1,237 @@
+\doxysection{Pipeline Class Reference}
+\hypertarget{class_pipeline}{}\label{class_pipeline}\index{Pipeline@{Pipeline}}
+
+
+The \doxylink{class_pipeline}{Pipeline} class represents a pipeline entity for water transport.  
+
+
+
+
+{\ttfamily \#include $<$Pipeline.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pipeline_a79e49366358f823b8812658f8bf3a9e8}{Pipeline}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_pipeline}{Pipeline} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pipeline_a0fe7779ae59ec3cd61795996d9f3c874}{Pipeline}} (string source, std\+::string target, double capacity, bool is\+\_\+bidirectional)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for \doxylink{class_pipeline}{Pipeline} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pipeline_a572200ccac5b14cd96ec1f4288335ad7}{get\+Source}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the source of the pipeline. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pipeline_a2fa2075a70d5a9570f7a492ab69c14c9}{get\+Target}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the target of the pipeline. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_pipeline_a54bd329491560e1b3612109df9389a40}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the capacity of the pipeline. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_pipeline_a969a8076f7939c201651188c5c2df2f6}{get\+Flow}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the flow of the pipeline. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pipeline_ad416b863c8c229fd44dd755ef80bae29}{is\+Bidirectional}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to check if the pipeline is bidirectional. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pipeline_a3219a5e0ef52b87fe8151019243ab7aa}{set\+Source}} (string source)
+\begin{DoxyCompactList}\small\item\em Setter function to set the source of the pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pipeline_aef18b6d1bf7dde9bbce0f4be4c1a91c6}{set\+Target}} (string target)
+\begin{DoxyCompactList}\small\item\em Setter function to set the target of the pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pipeline_afb4b3839c34cc7b1c3653ca97e1d6590}{set\+Capacity}} (double capacity)
+\begin{DoxyCompactList}\small\item\em Setter function to set the capacity of the pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pipeline_a2bb185ec32cd38b34ecd4a15fdda29d5}{set\+Bidirectional}} (bool is\+\_\+bidirectional)
+\begin{DoxyCompactList}\small\item\em Setter function to set whether the pipeline is bidirectional or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pipeline_a1cda31365eac0ef70c04a784dc383bc3}{set\+Flow}} (double flow)
+\begin{DoxyCompactList}\small\item\em Setter function to set the flow of the pipeline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_pipeline}{Pipeline} class represents a pipeline entity for water transport. 
+
+It stores information about a pipeline, including its source, target, capacity, and whether it is bidirectional or not.
+
+Time Complexity\+:
+\begin{DoxyItemize}
+\item Accessors (getters)\+: O(1)
+\item Mutators (setters)\+: O(1)
+\item Constructor (default and parameterized)\+: O(1) 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pipeline_a79e49366358f823b8812658f8bf3a9e8}\label{class_pipeline_a79e49366358f823b8812658f8bf3a9e8} 
+\index{Pipeline@{Pipeline}!Pipeline@{Pipeline}}
+\index{Pipeline@{Pipeline}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{Pipeline()}{Pipeline()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pipeline\+::\+Pipeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor for \doxylink{class_pipeline}{Pipeline} class. 
+
+Initializes a \doxylink{class_pipeline}{Pipeline} object with default values.
+
+Time Complexity\+: O(1) \Hypertarget{class_pipeline_a0fe7779ae59ec3cd61795996d9f3c874}\label{class_pipeline_a0fe7779ae59ec3cd61795996d9f3c874} 
+\index{Pipeline@{Pipeline}!Pipeline@{Pipeline}}
+\index{Pipeline@{Pipeline}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{Pipeline()}{Pipeline()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pipeline\+::\+Pipeline (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{std\+::string}]{target,  }\item[{double}]{capacity,  }\item[{bool}]{is\+\_\+bidirectional }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for \doxylink{class_pipeline}{Pipeline} class. 
+
+Initializes a \doxylink{class_pipeline}{Pipeline} object with the provided values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source of the pipeline. \\
+\hline
+{\em target} & Target of the pipeline. \\
+\hline
+{\em capacity} & Capacity of the pipeline. \\
+\hline
+{\em is\+\_\+bidirectional} & Flag indicating whether the pipeline is bidirectional.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pipeline_a54bd329491560e1b3612109df9389a40}\label{class_pipeline_a54bd329491560e1b3612109df9389a40} 
+\index{Pipeline@{Pipeline}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily double Pipeline\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the capacity of the pipeline. 
+
+\begin{DoxyReturn}{Returns}
+The capacity of the pipeline.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_pipeline_a969a8076f7939c201651188c5c2df2f6}\label{class_pipeline_a969a8076f7939c201651188c5c2df2f6} 
+\index{Pipeline@{Pipeline}!getFlow@{getFlow}}
+\index{getFlow@{getFlow}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{getFlow()}{getFlow()}}
+{\footnotesize\ttfamily double Pipeline\+::get\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the flow of the pipeline. 
+
+\begin{DoxyReturn}{Returns}
+The flow of the pipeline.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_pipeline_a572200ccac5b14cd96ec1f4288335ad7}\label{class_pipeline_a572200ccac5b14cd96ec1f4288335ad7} 
+\index{Pipeline@{Pipeline}!getSource@{getSource}}
+\index{getSource@{getSource}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{getSource()}{getSource()}}
+{\footnotesize\ttfamily string Pipeline\+::get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the source of the pipeline. 
+
+\begin{DoxyReturn}{Returns}
+The source of the pipeline.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_pipeline_a2fa2075a70d5a9570f7a492ab69c14c9}\label{class_pipeline_a2fa2075a70d5a9570f7a492ab69c14c9} 
+\index{Pipeline@{Pipeline}!getTarget@{getTarget}}
+\index{getTarget@{getTarget}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
+{\footnotesize\ttfamily string Pipeline\+::get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the target of the pipeline. 
+
+\begin{DoxyReturn}{Returns}
+The target of the pipeline.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_pipeline_ad416b863c8c229fd44dd755ef80bae29}\label{class_pipeline_ad416b863c8c229fd44dd755ef80bae29} 
+\index{Pipeline@{Pipeline}!isBidirectional@{isBidirectional}}
+\index{isBidirectional@{isBidirectional}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{isBidirectional()}{isBidirectional()}}
+{\footnotesize\ttfamily bool Pipeline\+::is\+Bidirectional (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to check if the pipeline is bidirectional. 
+
+\begin{DoxyReturn}{Returns}
+True if the pipeline is bidirectional, false otherwise.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_pipeline_a2bb185ec32cd38b34ecd4a15fdda29d5}\label{class_pipeline_a2bb185ec32cd38b34ecd4a15fdda29d5} 
+\index{Pipeline@{Pipeline}!setBidirectional@{setBidirectional}}
+\index{setBidirectional@{setBidirectional}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{setBidirectional()}{setBidirectional()}}
+{\footnotesize\ttfamily void Pipeline\+::set\+Bidirectional (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+bidirectional }\end{DoxyParamCaption})}
+
+
+
+Setter function to set whether the pipeline is bidirectional or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+bidirectional} & Flag indicating whether the pipeline is bidirectional.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_pipeline_afb4b3839c34cc7b1c3653ca97e1d6590}\label{class_pipeline_afb4b3839c34cc7b1c3653ca97e1d6590} 
+\index{Pipeline@{Pipeline}!setCapacity@{setCapacity}}
+\index{setCapacity@{setCapacity}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{setCapacity()}{setCapacity()}}
+{\footnotesize\ttfamily void Pipeline\+::set\+Capacity (\begin{DoxyParamCaption}\item[{double}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the capacity of the pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The capacity of the pipeline.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_pipeline_a1cda31365eac0ef70c04a784dc383bc3}\label{class_pipeline_a1cda31365eac0ef70c04a784dc383bc3} 
+\index{Pipeline@{Pipeline}!setFlow@{setFlow}}
+\index{setFlow@{setFlow}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{setFlow()}{setFlow()}}
+{\footnotesize\ttfamily void Pipeline\+::set\+Flow (\begin{DoxyParamCaption}\item[{double}]{flow }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the flow of the pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flow} & The flow of the pipeline.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_pipeline_a3219a5e0ef52b87fe8151019243ab7aa}\label{class_pipeline_a3219a5e0ef52b87fe8151019243ab7aa} 
+\index{Pipeline@{Pipeline}!setSource@{setSource}}
+\index{setSource@{setSource}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{setSource()}{setSource()}}
+{\footnotesize\ttfamily void Pipeline\+::set\+Source (\begin{DoxyParamCaption}\item[{string}]{source }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the source of the pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source of the pipeline.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_pipeline_aef18b6d1bf7dde9bbce0f4be4c1a91c6}\label{class_pipeline_aef18b6d1bf7dde9bbce0f4be4c1a91c6} 
+\index{Pipeline@{Pipeline}!setTarget@{setTarget}}
+\index{setTarget@{setTarget}!Pipeline@{Pipeline}}
+\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
+{\footnotesize\ttfamily void Pipeline\+::set\+Target (\begin{DoxyParamCaption}\item[{string}]{target }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the target of the pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target of the pipeline.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Pipeline.\+h\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Pipeline.\+cpp\end{DoxyCompactItemize}

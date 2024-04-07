@@ -1,0 +1,239 @@
+\doxysection{Water\+Reservoir Class Reference}
+\hypertarget{class_water_reservoir}{}\label{class_water_reservoir}\index{WaterReservoir@{WaterReservoir}}
+
+
+The \doxylink{class_water_reservoir}{Water\+Reservoir} class represents a water reservoir entity.  
+
+
+
+
+{\ttfamily \#include $<$Water\+Reservoir.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_water_reservoir_aa7bc5aa4a1d1bd29543116a0eea6df8a}{Water\+Reservoir}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_water_reservoir}{Water\+Reservoir} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_water_reservoir_a2663b6c8d881d25319eeccd1e1afa938}{Water\+Reservoir}} (string reservoir, string municipality, int reservoir\+\_\+id, string code, int max\+\_\+delivery)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for \doxylink{class_water_reservoir}{Water\+Reservoir} class. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_water_reservoir_a5c4f50b36c14a65c1a889ff1fd0c0af3}{get\+Reservoir}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the name of the water reservoir. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_water_reservoir_a24b78dd394dbd2012141af2dd25a2442}{get\+Municipality}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the name of the associated municipality. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_water_reservoir_ab125ad8824054ef5eb794776b453bfa4}{get\+Reservoir\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the unique ID of the reservoir. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_water_reservoir_adc98672316f1af10de5da27f5329e52f}{get\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the code representing the reservoir. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_water_reservoir_a18f8c55a846d97ba02c82b040099ebe2}{get\+Max\+Delivery}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the maximum delivery capacity of the reservoir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_water_reservoir_aeb987699c4834f53915e35a36ebf5e71}{set\+Reservoir}} (string n)
+\begin{DoxyCompactList}\small\item\em Setter function to set the name of the water reservoir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_water_reservoir_a0594e8fc1455dd0de091d69b71227724}{set\+Municipality}} (string m)
+\begin{DoxyCompactList}\small\item\em Setter function to set the name of the associated municipality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_water_reservoir_aaf53de10a41a80344b26aa5589aa157a}{set\+Reservoir\+Id}} (int r)
+\begin{DoxyCompactList}\small\item\em Setter function to set the unique ID of the reservoir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_water_reservoir_abf20a91f92ee6698cd9221c2e433c761}{set\+Code}} (string c)
+\begin{DoxyCompactList}\small\item\em Setter function to set the code representing the reservoir. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_water_reservoir_a719b4e7857d7782d820a56caccd8cbd2}{set\+Max\+Delivery}} (double d)
+\begin{DoxyCompactList}\small\item\em Setter function to set the maximum delivery capacity of the reservoir. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_water_reservoir}{Water\+Reservoir} class represents a water reservoir entity. 
+
+It stores information about a water reservoir, including its name, associated municipality, unique reservoir ID, code, and maximum delivery capacity.
+
+Time Complexity\+:
+\begin{DoxyItemize}
+\item Accessors (getters)\+: O(1)
+\item Mutators (setters)\+: O(1)
+\item Constructor (default and parameterized)\+: O(1) 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_water_reservoir_aa7bc5aa4a1d1bd29543116a0eea6df8a}\label{class_water_reservoir_aa7bc5aa4a1d1bd29543116a0eea6df8a} 
+\index{WaterReservoir@{WaterReservoir}!WaterReservoir@{WaterReservoir}}
+\index{WaterReservoir@{WaterReservoir}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{WaterReservoir()}{WaterReservoir()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Water\+Reservoir\+::\+Water\+Reservoir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor for \doxylink{class_water_reservoir}{Water\+Reservoir} class. 
+
+Initializes a \doxylink{class_water_reservoir}{Water\+Reservoir} object with default values.
+
+Time Complexity\+: O(1) \Hypertarget{class_water_reservoir_a2663b6c8d881d25319eeccd1e1afa938}\label{class_water_reservoir_a2663b6c8d881d25319eeccd1e1afa938} 
+\index{WaterReservoir@{WaterReservoir}!WaterReservoir@{WaterReservoir}}
+\index{WaterReservoir@{WaterReservoir}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{WaterReservoir()}{WaterReservoir()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Water\+Reservoir\+::\+Water\+Reservoir (\begin{DoxyParamCaption}\item[{string}]{reservoir,  }\item[{string}]{municipality,  }\item[{int}]{reservoir\+\_\+id,  }\item[{string}]{code,  }\item[{int}]{max\+\_\+delivery }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for \doxylink{class_water_reservoir}{Water\+Reservoir} class. 
+
+Initializes a \doxylink{class_water_reservoir}{Water\+Reservoir} object with the provided values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reservoir} & Name of the water reservoir. \\
+\hline
+{\em municipality} & Name of the associated municipality. \\
+\hline
+{\em reservoir\+\_\+id} & Unique ID of the reservoir. \\
+\hline
+{\em code} & Code representing the reservoir. \\
+\hline
+{\em max\+\_\+delivery} & Maximum delivery capacity of the reservoir.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_water_reservoir_adc98672316f1af10de5da27f5329e52f}\label{class_water_reservoir_adc98672316f1af10de5da27f5329e52f} 
+\index{WaterReservoir@{WaterReservoir}!getCode@{getCode}}
+\index{getCode@{getCode}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily string Water\+Reservoir\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the code representing the reservoir. 
+
+\begin{DoxyReturn}{Returns}
+The code representing the reservoir.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_water_reservoir_a18f8c55a846d97ba02c82b040099ebe2}\label{class_water_reservoir_a18f8c55a846d97ba02c82b040099ebe2} 
+\index{WaterReservoir@{WaterReservoir}!getMaxDelivery@{getMaxDelivery}}
+\index{getMaxDelivery@{getMaxDelivery}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{getMaxDelivery()}{getMaxDelivery()}}
+{\footnotesize\ttfamily int Water\+Reservoir\+::get\+Max\+Delivery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the maximum delivery capacity of the reservoir. 
+
+\begin{DoxyReturn}{Returns}
+The maximum delivery capacity of the reservoir.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_water_reservoir_a24b78dd394dbd2012141af2dd25a2442}\label{class_water_reservoir_a24b78dd394dbd2012141af2dd25a2442} 
+\index{WaterReservoir@{WaterReservoir}!getMunicipality@{getMunicipality}}
+\index{getMunicipality@{getMunicipality}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{getMunicipality()}{getMunicipality()}}
+{\footnotesize\ttfamily string Water\+Reservoir\+::get\+Municipality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the name of the associated municipality. 
+
+\begin{DoxyReturn}{Returns}
+The name of the associated municipality.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_water_reservoir_a5c4f50b36c14a65c1a889ff1fd0c0af3}\label{class_water_reservoir_a5c4f50b36c14a65c1a889ff1fd0c0af3} 
+\index{WaterReservoir@{WaterReservoir}!getReservoir@{getReservoir}}
+\index{getReservoir@{getReservoir}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{getReservoir()}{getReservoir()}}
+{\footnotesize\ttfamily string Water\+Reservoir\+::get\+Reservoir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the name of the water reservoir. 
+
+\begin{DoxyReturn}{Returns}
+The name of the water reservoir.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_water_reservoir_ab125ad8824054ef5eb794776b453bfa4}\label{class_water_reservoir_ab125ad8824054ef5eb794776b453bfa4} 
+\index{WaterReservoir@{WaterReservoir}!getReservoirId@{getReservoirId}}
+\index{getReservoirId@{getReservoirId}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{getReservoirId()}{getReservoirId()}}
+{\footnotesize\ttfamily int Water\+Reservoir\+::get\+Reservoir\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the unique ID of the reservoir. 
+
+\begin{DoxyReturn}{Returns}
+The unique ID of the reservoir.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_water_reservoir_abf20a91f92ee6698cd9221c2e433c761}\label{class_water_reservoir_abf20a91f92ee6698cd9221c2e433c761} 
+\index{WaterReservoir@{WaterReservoir}!setCode@{setCode}}
+\index{setCode@{setCode}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{setCode()}{setCode()}}
+{\footnotesize\ttfamily void Water\+Reservoir\+::set\+Code (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the code representing the reservoir. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The code representing the reservoir.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_water_reservoir_a719b4e7857d7782d820a56caccd8cbd2}\label{class_water_reservoir_a719b4e7857d7782d820a56caccd8cbd2} 
+\index{WaterReservoir@{WaterReservoir}!setMaxDelivery@{setMaxDelivery}}
+\index{setMaxDelivery@{setMaxDelivery}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{setMaxDelivery()}{setMaxDelivery()}}
+{\footnotesize\ttfamily void Water\+Reservoir\+::set\+Max\+Delivery (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the maximum delivery capacity of the reservoir. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & The maximum delivery capacity of the reservoir.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_water_reservoir_a0594e8fc1455dd0de091d69b71227724}\label{class_water_reservoir_a0594e8fc1455dd0de091d69b71227724} 
+\index{WaterReservoir@{WaterReservoir}!setMunicipality@{setMunicipality}}
+\index{setMunicipality@{setMunicipality}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{setMunicipality()}{setMunicipality()}}
+{\footnotesize\ttfamily void Water\+Reservoir\+::set\+Municipality (\begin{DoxyParamCaption}\item[{string}]{m }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the name of the associated municipality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The name of the associated municipality.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_water_reservoir_aeb987699c4834f53915e35a36ebf5e71}\label{class_water_reservoir_aeb987699c4834f53915e35a36ebf5e71} 
+\index{WaterReservoir@{WaterReservoir}!setReservoir@{setReservoir}}
+\index{setReservoir@{setReservoir}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{setReservoir()}{setReservoir()}}
+{\footnotesize\ttfamily void Water\+Reservoir\+::set\+Reservoir (\begin{DoxyParamCaption}\item[{string}]{n }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the name of the water reservoir. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The name of the water reservoir.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_water_reservoir_aaf53de10a41a80344b26aa5589aa157a}\label{class_water_reservoir_aaf53de10a41a80344b26aa5589aa157a} 
+\index{WaterReservoir@{WaterReservoir}!setReservoirId@{setReservoirId}}
+\index{setReservoirId@{setReservoirId}!WaterReservoir@{WaterReservoir}}
+\doxysubsubsection{\texorpdfstring{setReservoirId()}{setReservoirId()}}
+{\footnotesize\ttfamily void Water\+Reservoir\+::set\+Reservoir\+Id (\begin{DoxyParamCaption}\item[{int}]{r }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the unique ID of the reservoir. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The unique ID of the reservoir.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Water\+Reservoir.\+h\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Water\+Reservoir.\+cpp\end{DoxyCompactItemize}

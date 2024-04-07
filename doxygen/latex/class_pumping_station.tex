@@ -1,0 +1,137 @@
+\doxysection{Pumping\+Station Class Reference}
+\hypertarget{class_pumping_station}{}\label{class_pumping_station}\index{PumpingStation@{PumpingStation}}
+
+
+The \doxylink{class_pumping_station}{Pumping\+Station} class represents a pumping station entity.  
+
+
+
+
+{\ttfamily \#include $<$Pumping\+Station.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pumping_station_a380c747d470e859db5a889d75bd9746f}{Pumping\+Station}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_pumping_station}{Pumping\+Station} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pumping_station_acce832ba124d27b86a9aad8cdde0738a}{Pumping\+Station}} (int id, string code)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for \doxylink{class_pumping_station}{Pumping\+Station} class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pumping_station_aed0cf823a9d6b6662b55235b2d20c73c}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the unique ID of the pumping station. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_pumping_station_ac38d8cf4251fc07d1af45f1c06143a5e}{get\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the code representing the pumping station. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pumping_station_a45f9cdf02d7fe109183d165738e0240e}{set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Setter function to set the unique ID of the pumping station. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pumping_station_aea6158d7d682956d6ceced7c3a4cdb60}{set\+Code}} (string code)
+\begin{DoxyCompactList}\small\item\em Setter function to set the code representing the pumping station. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_pumping_station}{Pumping\+Station} class represents a pumping station entity. 
+
+It stores information about a pumping station, including its unique ID and code.
+
+Time Complexity\+:
+\begin{DoxyItemize}
+\item Accessors (getters)\+: O(1)
+\item Mutators (setters)\+: O(1)
+\item Constructor (default and parameterized)\+: O(1) 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pumping_station_a380c747d470e859db5a889d75bd9746f}\label{class_pumping_station_a380c747d470e859db5a889d75bd9746f} 
+\index{PumpingStation@{PumpingStation}!PumpingStation@{PumpingStation}}
+\index{PumpingStation@{PumpingStation}!PumpingStation@{PumpingStation}}
+\doxysubsubsection{\texorpdfstring{PumpingStation()}{PumpingStation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pumping\+Station\+::\+Pumping\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor for \doxylink{class_pumping_station}{Pumping\+Station} class. 
+
+Initializes a \doxylink{class_pumping_station}{Pumping\+Station} object with default values.
+
+Time Complexity\+: O(1) \Hypertarget{class_pumping_station_acce832ba124d27b86a9aad8cdde0738a}\label{class_pumping_station_acce832ba124d27b86a9aad8cdde0738a} 
+\index{PumpingStation@{PumpingStation}!PumpingStation@{PumpingStation}}
+\index{PumpingStation@{PumpingStation}!PumpingStation@{PumpingStation}}
+\doxysubsubsection{\texorpdfstring{PumpingStation()}{PumpingStation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pumping\+Station\+::\+Pumping\+Station (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string}]{code }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for \doxylink{class_pumping_station}{Pumping\+Station} class. 
+
+Initializes a \doxylink{class_pumping_station}{Pumping\+Station} object with the provided values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique ID of the pumping station. \\
+\hline
+{\em code} & Code representing the pumping station.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pumping_station_ac38d8cf4251fc07d1af45f1c06143a5e}\label{class_pumping_station_ac38d8cf4251fc07d1af45f1c06143a5e} 
+\index{PumpingStation@{PumpingStation}!getCode@{getCode}}
+\index{getCode@{getCode}!PumpingStation@{PumpingStation}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily std\+::string Pumping\+Station\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the code representing the pumping station. 
+
+\begin{DoxyReturn}{Returns}
+The code representing the pumping station.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_pumping_station_aed0cf823a9d6b6662b55235b2d20c73c}\label{class_pumping_station_aed0cf823a9d6b6662b55235b2d20c73c} 
+\index{PumpingStation@{PumpingStation}!getId@{getId}}
+\index{getId@{getId}!PumpingStation@{PumpingStation}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Pumping\+Station\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the unique ID of the pumping station. 
+
+\begin{DoxyReturn}{Returns}
+The unique ID of the pumping station.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_pumping_station_aea6158d7d682956d6ceced7c3a4cdb60}\label{class_pumping_station_aea6158d7d682956d6ceced7c3a4cdb60} 
+\index{PumpingStation@{PumpingStation}!setCode@{setCode}}
+\index{setCode@{setCode}!PumpingStation@{PumpingStation}}
+\doxysubsubsection{\texorpdfstring{setCode()}{setCode()}}
+{\footnotesize\ttfamily void Pumping\+Station\+::set\+Code (\begin{DoxyParamCaption}\item[{string}]{code }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the code representing the pumping station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The code representing the pumping station.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_pumping_station_a45f9cdf02d7fe109183d165738e0240e}\label{class_pumping_station_a45f9cdf02d7fe109183d165738e0240e} 
+\index{PumpingStation@{PumpingStation}!setId@{setId}}
+\index{setId@{setId}!PumpingStation@{PumpingStation}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Pumping\+Station\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the unique ID of the pumping station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the pumping station.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Pumping\+Station.\+h\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Pumping\+Station.\+cpp\end{DoxyCompactItemize}

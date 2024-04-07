@@ -1,0 +1,78 @@
+\doxysection{water\+Needs Class Reference}
+\hypertarget{classwater_needs}{}\label{classwater_needs}\index{waterNeeds@{waterNeeds}}
+
+
+The \doxylink{classwater_needs}{water\+Needs} class contains methods to determine the cities with water deficit, the maximum flow that can be sent to each or a specific delivery site, and to balance the load of the pipelines.  
+
+
+
+
+{\ttfamily \#include $<$water\+Needs.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ pair$<$ string, double $>$ $>$ \mbox{\hyperlink{classwater_needs_a12cc81e1cc5d18446829fd4b7888a002}{cities\+With\+Deficit}} (\mbox{\hyperlink{class_graph}{Graph}} main\+Graph)
+\begin{DoxyCompactList}\small\item\em Determines the cities with water deficit. \end{DoxyCompactList}\item 
+static unordered\+\_\+map$<$ string, double $>$ \mbox{\hyperlink{classwater_needs_ae604cf24c6562a2f28315915eb67c2c4}{max\+Flow}} (\mbox{\hyperlink{class_graph}{Graph}} \&main\+Graph, const string \&city="{}"{})
+\begin{DoxyCompactList}\small\item\em Determines the maximum flow that can be sent to each or a specific delivery site. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classwater_needs_aca5ba0362d8007270ebf430386604929}{balance\+Load}} (\mbox{\hyperlink{class_graph}{Graph}} \&main\+Graph)
+\begin{DoxyCompactList}\small\item\em Balances the load of the pipelines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classwater_needs}{water\+Needs} class contains methods to determine the cities with water deficit, the maximum flow that can be sent to each or a specific delivery site, and to balance the load of the pipelines. 
+
+Time Complexity\+:
+\begin{DoxyItemize}
+\item Cities with deficit\+: O(P+C) where P is the number of pipelines and C is the number of cities.
+\item Maximum flow\+: O(\+R\texorpdfstring{$\ast$}{*}\+C\texorpdfstring{$\ast$}{*}\+V\texorpdfstring{$\ast$}{*}\+E\texorpdfstring{$^\wedge$}{\string^}2) where R is the number of water reservoirs, C is the number of cities, V is the number of vertices in the graph and E is the number of edges.
+\item Balance load\+: O(\+R\texorpdfstring{$\ast$}{*}\+C\texorpdfstring{$\ast$}{*}\+V\texorpdfstring{$\ast$}{*}\+E\texorpdfstring{$^\wedge$}{\string^}2) where R is the number of water reservoirs, C is the number of cities, V is the number of vertices in the graph and E is the number of edges. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classwater_needs_aca5ba0362d8007270ebf430386604929}\label{classwater_needs_aca5ba0362d8007270ebf430386604929} 
+\index{waterNeeds@{waterNeeds}!balanceLoad@{balanceLoad}}
+\index{balanceLoad@{balanceLoad}!waterNeeds@{waterNeeds}}
+\doxysubsubsection{\texorpdfstring{balanceLoad()}{balanceLoad()}}
+{\footnotesize\ttfamily void water\+Needs\+::balance\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}} \&}]{main\+Graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Balances the load of the pipelines. 
+
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Time Complexity\+: O(\+R\texorpdfstring{$\ast$}{*}\+C\texorpdfstring{$\ast$}{*}\+V\texorpdfstring{$\ast$}{*}\+E\texorpdfstring{$^\wedge$}{\string^}2) where R is the number of water reservoirs, C is the number of cities, V is the number of vertices in the graph and E is the number of edges. \Hypertarget{classwater_needs_a12cc81e1cc5d18446829fd4b7888a002}\label{classwater_needs_a12cc81e1cc5d18446829fd4b7888a002} 
+\index{waterNeeds@{waterNeeds}!citiesWithDeficit@{citiesWithDeficit}}
+\index{citiesWithDeficit@{citiesWithDeficit}!waterNeeds@{waterNeeds}}
+\doxysubsubsection{\texorpdfstring{citiesWithDeficit()}{citiesWithDeficit()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ string, double $>$ $>$ water\+Needs\+::cities\+With\+Deficit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}}}]{main\+Graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determines the cities with water deficit. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pairs containing the city code and the deficit.
+\end{DoxyReturn}
+Time Complexity\+: O(P+C) where P is the number of pipelines and C is the number of cities. \Hypertarget{classwater_needs_ae604cf24c6562a2f28315915eb67c2c4}\label{classwater_needs_ae604cf24c6562a2f28315915eb67c2c4} 
+\index{waterNeeds@{waterNeeds}!maxFlow@{maxFlow}}
+\index{maxFlow@{maxFlow}!waterNeeds@{waterNeeds}}
+\doxysubsubsection{\texorpdfstring{maxFlow()}{maxFlow()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, double $>$ water\+Needs\+::max\+Flow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}} \&}]{main\+Graph,  }\item[{const string \&}]{city = {\ttfamily "{}"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determines the maximum flow that can be sent to each or a specific delivery site. 
+
+\begin{DoxyReturn}{Returns}
+Unordered map containing the delivery site code and the maximum flow that can be sent to it.
+\end{DoxyReturn}
+Time Complexity\+: O(\+R\texorpdfstring{$\ast$}{*}\+C\texorpdfstring{$\ast$}{*}\+V\texorpdfstring{$\ast$}{*}\+E\texorpdfstring{$^\wedge$}{\string^}2) where R is the number of water reservoirs, C is the number of cities, V is the number of vertices in the graph and E is the number of edges. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/water\+Needs.\+h\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/water\+Needs.\+cpp\end{DoxyCompactItemize}

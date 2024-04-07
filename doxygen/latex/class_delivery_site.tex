@@ -1,0 +1,239 @@
+\doxysection{Delivery\+Site Class Reference}
+\hypertarget{class_delivery_site}{}\label{class_delivery_site}\index{DeliverySite@{DeliverySite}}
+
+
+The \doxylink{class_delivery_site}{Delivery\+Site} class represents a delivery site for water distribution.  
+
+
+
+
+{\ttfamily \#include $<$Delivery\+Site.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_delivery_site_a9809847d9e14fcd613ba1c16bf1b4a0d}{Delivery\+Site}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_delivery_site}{Delivery\+Site} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_delivery_site_ad8c5cc8f3ff4acd7324bcab583027f76}{Delivery\+Site}} (string city, int id, string code, double demand, double population)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for \doxylink{class_delivery_site}{Delivery\+Site} class. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_delivery_site_a27e1ba624deb042cab8cd39bf61d3606}{get\+City}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the city of the delivery site. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_delivery_site_a65fa0c80d0277f6ed2e5593c59be2084}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the ID of the delivery site. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_delivery_site_adc1f2c148541f485b0884c52d9ee851d}{get\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the code of the delivery site. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_delivery_site_a8a95061f94ffea9e344ad1c85ff79d77}{get\+Demand}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the demand for water at the delivery site. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_delivery_site_aab8c07a043f10a2eae037e562fe6f054}{get\+Population}} () const
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the population served by the delivery site. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delivery_site_ac60a627015fbe7e06601ff7d7c6c80de}{set\+City}} (string city)
+\begin{DoxyCompactList}\small\item\em Setter function to set the city of the delivery site. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delivery_site_abaefa1950da40d52c9d81bbbe28649bc}{set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Setter function to set the ID of the delivery site. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delivery_site_a0cca5dad7080920f479a2915069e47b0}{set\+Code}} (string code)
+\begin{DoxyCompactList}\small\item\em Setter function to set the code of the delivery site. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delivery_site_aa26ae3e72d8770cf12f6dbafc21430a7}{set\+Demand}} (double demand)
+\begin{DoxyCompactList}\small\item\em Setter function to set the demand for water at the delivery site. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_delivery_site_a62382ebeb67bc778c4687880330bf5d9}{set\+Population}} (int population)
+\begin{DoxyCompactList}\small\item\em Setter function to set the population served by the delivery site. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_delivery_site}{Delivery\+Site} class represents a delivery site for water distribution. 
+
+It stores information about a delivery site, including its city, ID, code, demand, and population.
+
+Time Complexity\+:
+\begin{DoxyItemize}
+\item Accessors (getters)\+: O(1)
+\item Mutators (setters)\+: O(1)
+\item Constructor (default and parameterized)\+: O(1) 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_delivery_site_a9809847d9e14fcd613ba1c16bf1b4a0d}\label{class_delivery_site_a9809847d9e14fcd613ba1c16bf1b4a0d} 
+\index{DeliverySite@{DeliverySite}!DeliverySite@{DeliverySite}}
+\index{DeliverySite@{DeliverySite}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{DeliverySite()}{DeliverySite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Delivery\+Site\+::\+Delivery\+Site (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor for \doxylink{class_delivery_site}{Delivery\+Site} class. 
+
+Initializes a \doxylink{class_delivery_site}{Delivery\+Site} object with default values.
+
+Time Complexity\+: O(1) \Hypertarget{class_delivery_site_ad8c5cc8f3ff4acd7324bcab583027f76}\label{class_delivery_site_ad8c5cc8f3ff4acd7324bcab583027f76} 
+\index{DeliverySite@{DeliverySite}!DeliverySite@{DeliverySite}}
+\index{DeliverySite@{DeliverySite}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{DeliverySite()}{DeliverySite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Delivery\+Site\+::\+Delivery\+Site (\begin{DoxyParamCaption}\item[{string}]{city,  }\item[{int}]{id,  }\item[{string}]{code,  }\item[{double}]{demand,  }\item[{double}]{population }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for \doxylink{class_delivery_site}{Delivery\+Site} class. 
+
+Initializes a \doxylink{class_delivery_site}{Delivery\+Site} object with the provided values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em city} & City where the delivery site is located. \\
+\hline
+{\em id} & ID of the delivery site. \\
+\hline
+{\em code} & Code identifying the delivery site. \\
+\hline
+{\em demand} & Demand for water at the delivery site. \\
+\hline
+{\em population} & Population served by the delivery site.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_delivery_site_a27e1ba624deb042cab8cd39bf61d3606}\label{class_delivery_site_a27e1ba624deb042cab8cd39bf61d3606} 
+\index{DeliverySite@{DeliverySite}!getCity@{getCity}}
+\index{getCity@{getCity}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{getCity()}{getCity()}}
+{\footnotesize\ttfamily string Delivery\+Site\+::get\+City (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the city of the delivery site. 
+
+\begin{DoxyReturn}{Returns}
+The city of the delivery site.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_delivery_site_adc1f2c148541f485b0884c52d9ee851d}\label{class_delivery_site_adc1f2c148541f485b0884c52d9ee851d} 
+\index{DeliverySite@{DeliverySite}!getCode@{getCode}}
+\index{getCode@{getCode}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily string Delivery\+Site\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the code of the delivery site. 
+
+\begin{DoxyReturn}{Returns}
+The code of the delivery site.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_delivery_site_a8a95061f94ffea9e344ad1c85ff79d77}\label{class_delivery_site_a8a95061f94ffea9e344ad1c85ff79d77} 
+\index{DeliverySite@{DeliverySite}!getDemand@{getDemand}}
+\index{getDemand@{getDemand}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{getDemand()}{getDemand()}}
+{\footnotesize\ttfamily double Delivery\+Site\+::get\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the demand for water at the delivery site. 
+
+\begin{DoxyReturn}{Returns}
+The demand for water at the delivery site.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_delivery_site_a65fa0c80d0277f6ed2e5593c59be2084}\label{class_delivery_site_a65fa0c80d0277f6ed2e5593c59be2084} 
+\index{DeliverySite@{DeliverySite}!getId@{getId}}
+\index{getId@{getId}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Delivery\+Site\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the ID of the delivery site. 
+
+\begin{DoxyReturn}{Returns}
+The ID of the delivery site.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_delivery_site_aab8c07a043f10a2eae037e562fe6f054}\label{class_delivery_site_aab8c07a043f10a2eae037e562fe6f054} 
+\index{DeliverySite@{DeliverySite}!getPopulation@{getPopulation}}
+\index{getPopulation@{getPopulation}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{getPopulation()}{getPopulation()}}
+{\footnotesize\ttfamily double Delivery\+Site\+::get\+Population (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter function to retrieve the population served by the delivery site. 
+
+\begin{DoxyReturn}{Returns}
+The population served by the delivery site.
+\end{DoxyReturn}
+Time Complexity\+: O(1) \Hypertarget{class_delivery_site_ac60a627015fbe7e06601ff7d7c6c80de}\label{class_delivery_site_ac60a627015fbe7e06601ff7d7c6c80de} 
+\index{DeliverySite@{DeliverySite}!setCity@{setCity}}
+\index{setCity@{setCity}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{setCity()}{setCity()}}
+{\footnotesize\ttfamily void Delivery\+Site\+::set\+City (\begin{DoxyParamCaption}\item[{string}]{city }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the city of the delivery site. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city} & The city of the delivery site.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_delivery_site_a0cca5dad7080920f479a2915069e47b0}\label{class_delivery_site_a0cca5dad7080920f479a2915069e47b0} 
+\index{DeliverySite@{DeliverySite}!setCode@{setCode}}
+\index{setCode@{setCode}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{setCode()}{setCode()}}
+{\footnotesize\ttfamily void Delivery\+Site\+::set\+Code (\begin{DoxyParamCaption}\item[{string}]{code }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the code of the delivery site. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The code of the delivery site.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_delivery_site_aa26ae3e72d8770cf12f6dbafc21430a7}\label{class_delivery_site_aa26ae3e72d8770cf12f6dbafc21430a7} 
+\index{DeliverySite@{DeliverySite}!setDemand@{setDemand}}
+\index{setDemand@{setDemand}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{setDemand()}{setDemand()}}
+{\footnotesize\ttfamily void Delivery\+Site\+::set\+Demand (\begin{DoxyParamCaption}\item[{double}]{demand }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the demand for water at the delivery site. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em demand} & The demand for water at the delivery site.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_delivery_site_abaefa1950da40d52c9d81bbbe28649bc}\label{class_delivery_site_abaefa1950da40d52c9d81bbbe28649bc} 
+\index{DeliverySite@{DeliverySite}!setId@{setId}}
+\index{setId@{setId}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Delivery\+Site\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the ID of the delivery site. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the delivery site.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) \Hypertarget{class_delivery_site_a62382ebeb67bc778c4687880330bf5d9}\label{class_delivery_site_a62382ebeb67bc778c4687880330bf5d9} 
+\index{DeliverySite@{DeliverySite}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!DeliverySite@{DeliverySite}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void Delivery\+Site\+::set\+Population (\begin{DoxyParamCaption}\item[{int}]{population }\end{DoxyParamCaption})}
+
+
+
+Setter function to set the population served by the delivery site. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em population} & The population served by the delivery site.\\
+\hline
+\end{DoxyParams}
+Time Complexity\+: O(1) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Delivery\+Site.\+h\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Delivery\+Site.\+cpp\end{DoxyCompactItemize}

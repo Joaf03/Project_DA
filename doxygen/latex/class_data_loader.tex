@@ -1,0 +1,116 @@
+\doxysection{Data\+Loader Class Reference}
+\hypertarget{class_data_loader}{}\label{class_data_loader}\index{DataLoader@{DataLoader}}
+
+
+The \doxylink{class_data_loader}{Data\+Loader} class provides methods to load data from files.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Loader.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_water_reservoir}{Water\+Reservoir}} $>$ \mbox{\hyperlink{class_data_loader_a29f2c31802c30d636e81442b8452cfb3}{load\+Water\+Reservoirs}} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Load water reservoirs from a file. \end{DoxyCompactList}\item 
+static vector$<$ \mbox{\hyperlink{class_pumping_station}{Pumping\+Station}} $>$ \mbox{\hyperlink{class_data_loader_a7bb3207e0d5608b29ee463db2f18d3b5}{load\+Pumping\+Stations}} (string \&filename)
+\begin{DoxyCompactList}\small\item\em Load pumping stations from a file. \end{DoxyCompactList}\item 
+static vector$<$ \mbox{\hyperlink{class_delivery_site}{Delivery\+Site}} $>$ \mbox{\hyperlink{class_data_loader_af58c84a0cc3819c8ecb51fa434b443c2}{load\+Delivery\+Sites}} (string \&filename)
+\begin{DoxyCompactList}\small\item\em Load delivery sites from a file. \end{DoxyCompactList}\item 
+static vector$<$ \mbox{\hyperlink{class_pipeline}{Pipeline}} $>$ \mbox{\hyperlink{class_data_loader_adc35a19d124e863aba655e36915860cc}{load\+Pipelines}} (string \&filename)
+\begin{DoxyCompactList}\small\item\em Load pipelines from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_data_loader}{Data\+Loader} class provides methods to load data from files. 
+
+It includes static methods to load water reservoirs, pumping stations, delivery sites, and pipelines from specified files. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_data_loader_af58c84a0cc3819c8ecb51fa434b443c2}\label{class_data_loader_af58c84a0cc3819c8ecb51fa434b443c2} 
+\index{DataLoader@{DataLoader}!loadDeliverySites@{loadDeliverySites}}
+\index{loadDeliverySites@{loadDeliverySites}!DataLoader@{DataLoader}}
+\doxysubsubsection{\texorpdfstring{loadDeliverySites()}{loadDeliverySites()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_delivery_site}{Delivery\+Site}} $>$ Data\+Loader\+::load\+Delivery\+Sites (\begin{DoxyParamCaption}\item[{string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Load delivery sites from a file. 
+
+Reads data from the specified CSV file and constructs \doxylink{class_delivery_site}{Delivery\+Site} objects. Each line in the file represents a delivery site with attributes separated by commas. The format of each line should be\+: city,id,code,demand,population.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load delivery site data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \doxylink{class_delivery_site}{Delivery\+Site} objects loaded from the file. 
+\end{DoxyReturn}
+\Hypertarget{class_data_loader_adc35a19d124e863aba655e36915860cc}\label{class_data_loader_adc35a19d124e863aba655e36915860cc} 
+\index{DataLoader@{DataLoader}!loadPipelines@{loadPipelines}}
+\index{loadPipelines@{loadPipelines}!DataLoader@{DataLoader}}
+\doxysubsubsection{\texorpdfstring{loadPipelines()}{loadPipelines()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pipeline}{Pipeline}} $>$ Data\+Loader\+::load\+Pipelines (\begin{DoxyParamCaption}\item[{string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Load pipelines from a file. 
+
+Reads data from the specified CSV file and constructs \doxylink{class_pipeline}{Pipeline} objects. Each line in the file represents a pipeline with attributes separated by commas. The format of each line should be\+: source,target,capacity,direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load pipeline data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \doxylink{class_pipeline}{Pipeline} objects loaded from the file. 
+\end{DoxyReturn}
+\Hypertarget{class_data_loader_a7bb3207e0d5608b29ee463db2f18d3b5}\label{class_data_loader_a7bb3207e0d5608b29ee463db2f18d3b5} 
+\index{DataLoader@{DataLoader}!loadPumpingStations@{loadPumpingStations}}
+\index{loadPumpingStations@{loadPumpingStations}!DataLoader@{DataLoader}}
+\doxysubsubsection{\texorpdfstring{loadPumpingStations()}{loadPumpingStations()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pumping_station}{Pumping\+Station}} $>$ Data\+Loader\+::load\+Pumping\+Stations (\begin{DoxyParamCaption}\item[{string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Load pumping stations from a file. 
+
+Reads data from the specified CSV file and constructs \doxylink{class_pumping_station}{Pumping\+Station} objects. Each line in the file represents a pumping station with attributes separated by commas. The format of each line should be\+: id,code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load pumping station data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \doxylink{class_pumping_station}{Pumping\+Station} objects loaded from the file. 
+\end{DoxyReturn}
+\Hypertarget{class_data_loader_a29f2c31802c30d636e81442b8452cfb3}\label{class_data_loader_a29f2c31802c30d636e81442b8452cfb3} 
+\index{DataLoader@{DataLoader}!loadWaterReservoirs@{loadWaterReservoirs}}
+\index{loadWaterReservoirs@{loadWaterReservoirs}!DataLoader@{DataLoader}}
+\doxysubsubsection{\texorpdfstring{loadWaterReservoirs()}{loadWaterReservoirs()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_water_reservoir}{Water\+Reservoir}} $>$ Data\+Loader\+::load\+Water\+Reservoirs (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Load water reservoirs from a file. 
+
+Reads data from the specified CSV file and constructs \doxylink{class_water_reservoir}{Water\+Reservoir} objects. Each line in the file represents a water reservoir with attributes separated by commas. The format of each line should be\+: name,municipality,id,code,max\+Delivery.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load water reservoir data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of \doxylink{class_water_reservoir}{Water\+Reservoir} objects loaded from the file. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Data\+Loader.\+h\item 
+C\+:/\+Users/\+User/\+Desktop/feup/da/\+Project\+\_\+\+DA/src/Data\+Loader.\+cpp\end{DoxyCompactItemize}

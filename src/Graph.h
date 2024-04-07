@@ -25,6 +25,10 @@ using namespace std;
  * - Getting pumping stations: O(1)
  * - Getting delivery sites: O(1)
  * - Getting pipelines: O(1)
+ * - BFS: O(V+E)
+ * - Edmonds-Karp algorithm: O(VE^2)
+ * - Determining cities affected by ruptured pipelines: O(VE^3)
+ * - Balancing load: O(R*C*V*E^2)
  */
 class Graph {
 private:
@@ -137,8 +141,22 @@ public:
         return pipelines;
     }
 
+    /**
+     * @brief Runs the Edmonds-Karp algorithm to find the maximum flow from a water reservoir to a delivery site.
+     *
+     * @return Maximum flow from the water reservoir to the delivery site.
+     *
+     * Time Complexity: O(VE^2), where V is the number of vertices in the graph and E is the number of edges.
+     */
     static double edmondsKarp(WaterReservoir s, DeliverySite t, Graph& mainGraph);
 
+    /**
+     * @brief Determines the cities affected by a pipeline failure.
+     *
+     * @return Unordered map containing a vector of pairs of affected cities and the amount of water they will not receive.
+     *
+     * Time Complexity: O(VE^3), where V is the number of vertices in the graph and E is the number of edges.
+     */
     static unordered_map<string, vector<pair<string, double>>> pipeAffectedCities(Graph& mainGraph, vector<Pipeline> pipelines = {});
 };
 
