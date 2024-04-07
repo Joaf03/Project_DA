@@ -139,7 +139,7 @@ public:
 
     static double edmondsKarp(WaterReservoir s, DeliverySite t, Graph& mainGraph);
 
-    static unordered_map<string, vector<pair<string, double>>> pipeAffectedCities(Graph& mainGraph);
+    static unordered_map<string, vector<pair<string, double>>> pipeAffectedCities(Graph& mainGraph, vector<Pipeline> pipelines = {});
 };
 
 

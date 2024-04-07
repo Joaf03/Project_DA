@@ -149,21 +149,57 @@ int main(){
         }
 
         if (filter == 6) {
-            auto result = Graph::pipeAffectedCities(mainGraph);
-            cout << "These cities do not get enough water: " << endl;
-            cout << "Pipeline (Source -> Target): ";
-            for(auto &pipe: result) {
-                cout << pipe.first << endl;
-                cout << "\tCity | Old Flow | New Flow" << endl;
-                for(auto &city: pipe.second) {
-                    auto oldFlow = waterNeeds::maxFlow(mainGraph, city.first).at(city.first);
-                    cout << "\t" << city.first << " | " << oldFlow << " | " << city.second << endl;
-                }
-                cout << '\n';
-            }
-
-            cout << "\nType 1 to return: ";
             int userInput;
+            cout << "Do you want to examine each or a specific Pipeline?: " << endl;
+            cout << "1. Each Pipeline" << endl;
+            cout << "2. Specific Pipeline (you can insert multiple)" << endl;
+            cin >> userInput;
+            if(userInput == 1) {
+                auto result = Graph::pipeAffectedCities(mainGraph);
+                cout << "These cities do not get enough water: " << endl;
+                cout << "Pipeline (Source -> Target): ";
+                for (auto &pipe: result) {
+                    cout << pipe.first << endl;
+                    cout << "\tCity | Old Flow | New Flow" << endl;
+                    for (auto &city: pipe.second) {
+                        auto oldFlow = waterNeeds::maxFlow(mainGraph, city.first).at(city.first);
+                        cout << "\t" << city.first << " | " << oldFlow << " | " << city.second << endl;
+                    }
+                    cout << '\n';
+                }
+            }
+            else if(userInput == 2){
+                string source, target;
+                vector<Pipeline> pipelines;
+                while(source != "0"){
+                    cout << "Enter the code of the source of the pipeline you want to examine (Write 0 to advance):" << endl;
+                    cin >> source;
+                    if(source != "0"){
+                        cout << "Now enter the code of the target of the pipeline:" << endl;
+                        cin >> target;
+                        for(auto &pipe: mainGraph.getPipelines()){
+                            if(pipe.getSource() == source && pipe.getTarget() == target) pipelines.push_back(pipe);
+                        }
+                    }
+                    else if(pipelines.empty()){
+                        cout << "You must enter at least one Pipeline." << endl;
+                        source = "";
+                    }
+                }
+                auto result = Graph::pipeAffectedCities(mainGraph, pipelines);
+                cout << "These cities do not get enough water: " << endl;
+                cout << "Pipeline (Source -> Target): ";
+                for (auto &pipe: result) {
+                    cout << pipe.first << endl;
+                    cout << "\tCity | Old Flow | New Flow" << endl;
+                    for (auto &city: pipe.second) {
+                        auto oldFlow = waterNeeds::maxFlow(mainGraph, city.first).at(city.first);
+                        cout << "\t" << city.first << " | " << oldFlow << " | " << city.second << endl;
+                    }
+                    cout << '\n';
+                }
+            }
+            cout << "\nType 1 to return: ";
             cin >> userInput;
 
             // Validate user input if necessary

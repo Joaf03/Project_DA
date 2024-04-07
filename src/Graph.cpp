@@ -73,10 +73,10 @@ double Graph::edmondsKarp(WaterReservoir s, DeliverySite t, Graph& mainGraph) {
     return flow;
 }
 
-unordered_map<string, vector<pair<string, double>>> Graph::pipeAffectedCities(Graph& mainGraph){
+unordered_map<string, vector<pair<string, double>>> Graph::pipeAffectedCities(Graph& mainGraph, vector<Pipeline> pipelines){
     unordered_map<string, vector<pair<string, double>>> affectedCities;
-
-    for(auto& pipe : mainGraph.getPipelines()){
+    if(pipelines.empty()) pipelines = mainGraph.getPipelines();
+    for(auto& pipe : pipelines){
         double cap = pipe.getCapacity();
         pipe.setCapacity(0);
         for(auto& city : mainGraph.getDeliverySites()){
