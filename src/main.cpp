@@ -37,7 +37,6 @@ int main(){
     waterNeeds::citiesWithDeficit(mainGraph);
     // for(auto &city: result) cout << city.first << " " << city.second << '\n';
 
-    waterNeeds::maxFlow(mainGraph);
     // for(auto &city: res) cout << city.first << " " << city.second << '\n';
 
     int filter;
@@ -54,25 +53,14 @@ int main(){
         if (filter == 1) {
 
             int userInput;
-            cout << "Do you want to determine the maximum amount of water that can reach each or a specific city?: " << endl;
-            cout << "1. Each City" << endl;
-            cout << "2. Specific CIty" << endl;
-            cin >> userInput;
-            if(userInput == 1) {
-                auto res = waterNeeds::maxFlow(mainGraph);
-                cout << "This is the maximum flow of water: " << endl;
-                cout << "City Code" << " | " << "Maximum Flow" << '\n';
-                for(auto &city: res) cout << city.first << " | " << city.second << '\n';
+            string city;
+            cout << "Enter the city code you want to determine the maximum amount of water that can reach it: ";
+            cin >> city;
+            auto result = waterNeeds::maxFlow(mainGraph, city);
+            cout << "This is the maximum flow of water: " << endl;
+            cout << "City Code" << " | " << "Maximum Flow" << '\n';
+            for(auto &cityFlow: result) cout << cityFlow.first << " | " << cityFlow.second << '\n';
 
-            } else {
-                string city;
-                cout << "Enter the city code you want to determine the maximum amount of water that can reach it: ";
-                cin >> city;
-                auto result = waterNeeds::maxFlow(mainGraph, city);
-                cout << "This is the maximum flow of water: " << endl;
-                cout << "City Code" << " | " << "Maximum Flow" << '\n';
-                for(auto &cityFlow: result) cout << cityFlow.first << " | " << cityFlow.second << '\n';
-            }
 
 
             cout << "\nType 1 to return: ";

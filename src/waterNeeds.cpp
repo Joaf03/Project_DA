@@ -41,26 +41,30 @@ unordered_map<string, double> waterNeeds::maxFlow(Graph &mainGraph, const string
     unordered_map<string, double> maxFlows;
     unordered_map<string, DeliverySite> deliverySites = mainGraph.getDeliverySites();
     unordered_map<string, WaterReservoir> reservoirs = mainGraph.getWaterReservoirs();
-
-    if(city.empty()) {
-        for (const auto& sink : deliverySites) {
-            double flow = Graph::edmondsKarp(sink.second, mainGraph);
-            if (maxFlows.find(sink.first) == maxFlows.end() || flow > maxFlows[sink.first]) {
-                if(flow >= sink.second.getDemand()) {
-                    maxFlows[sink.first] = sink.second.getDemand();
-                } else {
-                    maxFlows[sink.first] = flow;
+    int d = 1;
+    /* if(city.empty()) {
+        while(d != deliverySites.size()) {
+            for (const auto& sink : deliverySites) {
+                if(sink.second.getId() == d) {
+                    double flow = Graph::edmondsKarp(sink.second, mainGraph);
+                    if (maxFlows.find(sink.first) == maxFlows.end() || flow > maxFlows[sink.first]) {
+                        if(flow >= sink.second.getDemand()) {
+                            maxFlows[sink.first] = sink.second.getDemand();
+                        } else {
+                            maxFlows[sink.first] = flow;
+                        }
+                    }
+                    d++;
                 }
             }
         }
-    } else {
-        for (const auto& source : reservoirs) {
-            double flow = Graph::edmondsKarp(deliverySites.at(city), mainGraph);
-            if (maxFlows.find(city) == maxFlows.end() || flow > maxFlows[city]) {
-                maxFlows[city] = flow;
-            }
+
+    } else { */
+        double flow = Graph::edmondsKarp(deliverySites.at(city), mainGraph);
+        if (maxFlows.find(city) == maxFlows.end() || flow > maxFlows[city]) {
+            maxFlows[city] = flow;
         }
-    }
+    // } //
     return maxFlows;
 }
 

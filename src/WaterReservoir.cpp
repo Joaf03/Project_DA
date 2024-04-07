@@ -11,41 +11,41 @@ WaterReservoir::WaterReservoir(string reservoir, string municipality, int reserv
 }
 
 string WaterReservoir::getReservoir() const{
-    return reservoir;
+    return this->reservoir;
 }
 
 string WaterReservoir::getMunicipality() const{
-    return municipality;
+    return this->municipality;
 }
 
 int WaterReservoir::getReservoirId() const {
-    return reservoir_id;
+    return this->reservoir_id;
 }
 
 string WaterReservoir::getCode() const {
-    return code;
+    return this->code;
 }
 
 int WaterReservoir::getMaxDelivery() const {
-    return max_delivery;
+    return this->max_delivery;
 }
 
 void WaterReservoir::setReservoir(string n) {
-    reservoir = n;
+    this->reservoir = n;
 }
 
 void WaterReservoir::setMunicipality(string m) {
-    municipality = m;
+    this->municipality = m;
 }
 
 void WaterReservoir::setReservoirId(int r){
-    reservoir_id = r;
+    this->reservoir_id = r;
 }
 
 void WaterReservoir::setCode(string c) {
-    code = c;
+    this->code = c;
 }
 
 void WaterReservoir::setMaxDelivery(double d) {
-    max_delivery = d;
+    this->max_delivery = d;
 }

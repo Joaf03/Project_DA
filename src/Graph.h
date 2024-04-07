@@ -100,8 +100,8 @@ public:
      *
      * Time Complexity: O(1)
      */
-    unordered_map<string, WaterReservoir> getWaterReservoirs() const {
-        return waterReservoirs;
+    unordered_map<string, WaterReservoir>& getWaterReservoirs() {
+        return this->waterReservoirs;
     }
 
     /**
@@ -111,8 +111,8 @@ public:
      *
      * Time Complexity: O(1)
      */
-    unordered_map<string, PumpingStation> getPumpingStations() const {
-        return pumpingStations;
+    unordered_map<string, PumpingStation>& getPumpingStations() {
+        return this->pumpingStations;
     }
 
     /**
@@ -122,8 +122,8 @@ public:
      *
      * Time Complexity: O(1)
      */
-    unordered_map<string, DeliverySite> getDeliverySites() const {
-        return deliverySites;
+    unordered_map<string, DeliverySite>& getDeliverySites() {
+        return this->deliverySites;
     }
 
     /**
@@ -134,7 +134,7 @@ public:
      * Time Complexity: O(1)
      */
     vector<Pipeline>& getPipelines() {
-        return pipelines;
+        return this->pipelines;
     }
 
     static double edmondsKarp(const DeliverySite& t, Graph& mainGraph);

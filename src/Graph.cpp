@@ -12,6 +12,7 @@ using namespace std;
 
 vector<double> Graph::bfs(const WaterReservoir& s, const DeliverySite& t, Graph& mainGraph, vector<vector<string>>& allPaths) {
     vector<string> path;
+    Graph graph_copy = mainGraph;
     path.push_back(s.getCode());
     vector<string> visited;
     priority_queue<pair<int, pair<vector<string>, double>>, vector<pair<int, pair<vector<string>, double>>>, greater<>> q;
@@ -40,32 +41,32 @@ vector<double> Graph::bfs(const WaterReservoir& s, const DeliverySite& t, Graph&
 
             vector<string> path_copy = cur_path;
             while (cur != s.getCode()) {
-                for (auto& pipe : mainGraph.getPipelines()) {
-                    if (pipe.getSource() == path_copy.back() && pipe.getTarget() == cur) {
-                        pipe.setCapacity(pipe.getCapacity() - flow);
+                for (size_t i = 0; i < graph_copy.getPipelines().size(); ++i) {
+                    if (graph_copy.getPipelines()[i].getSource() == path_copy.back() && graph_copy.getPipelines()[i].getTarget() == cur) {
+                        graph_copy.getPipelines()[i].setCapacity(graph_copy.getPipelines()[i].getCapacity() - flow);
                     }
-                    if (pipe.getSource() == cur && pipe.getTarget() == path_copy.back()) {
-                        pipe.setCapacity(pipe.getCapacity() + flow);
+                    if (graph_copy.getPipelines()[i].getSource() == cur && graph_copy.getPipelines()[i].getTarget() == path_copy.back()) {
+                        graph_copy.getPipelines()[i].setCapacity(graph_copy.getPipelines()[i].getCapacity() + flow);
                     }
                 }
                 cur = path_copy.back();
                 path_copy.pop_back();
             }
-            for(auto reservoir: mainGraph.getWaterReservoirs()){
+            for(auto& reservoir: graph_copy.getWaterReservoirs()){
                 if(reservoir.first == s.getCode()){
-                    reservoir.second.setMaxDelivery(reservoir.second.getMaxDelivery() - flow);
+                    graph_copy.getWaterReservoirs()[reservoir.first].setMaxDelivery(reservoir.second.getMaxDelivery() - flow);
                 }
             }
             continue;
         }
 
-        for (const auto& pipeline : mainGraph.getPipelines()) {
+        for (const auto& pipeline : graph_copy.getPipelines()) {
             if (pipeline.getSource() != cur)
                 continue;
             string next = pipeline.getTarget();
             double capastring = pipeline.getCapacity();
             if (find(visited.begin(), visited.end(), next) == visited.end() && capastring > 0) {
-                WaterReservoir reservoir = mainGraph.getWaterReservoirs()[s.getCode()];
+                WaterReservoir reservoir = graph_copy.getWaterReservoirs()[s.getCode()];
                 vector<double> values = {flow, capastring, (double) reservoir.getMaxDelivery()};
                 double new_flow = *min_element(values.begin(), values.end());
 
@@ -79,6 +80,7 @@ vector<double> Graph::bfs(const WaterReservoir& s, const DeliverySite& t, Graph&
         }
     }
 
+    mainGraph = graph_copy;
     return min_flows;
 }
 
