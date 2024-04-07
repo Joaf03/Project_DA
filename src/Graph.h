@@ -27,8 +27,9 @@ using namespace std;
  * - Getting pipelines: O(1)
  * - BFS: O(V+E)
  * - Edmonds-Karp algorithm: O(VE^2)
+ * - Updating water reservoirs: O(n)
+ * - Determining cities affected by removed reservoir: O(C*VE^2)
  * - Determining cities affected by ruptured pipelines: O(VE^3)
- * - Balancing load: O(R*C*V*E^2)
  */
 class Graph {
 private:
@@ -149,6 +150,24 @@ public:
      * Time Complexity: O(VE^2), where V is the number of vertices in the graph and E is the number of edges.
      */
     static double edmondsKarp(WaterReservoir s, DeliverySite t, Graph& mainGraph);
+
+    /**
+     * @brief Updates the water reservoirs stored in the graph.
+     *
+     * @param reservoirs Map containing the water reservoirs to be updated.
+     *
+     * Time Complexity: O(n), where n is the number of water reservoirs to be updated.
+     */
+    void updateWaterReservoirs(const unordered_map<string, WaterReservoir>& reservoirs);
+
+    /**
+     * @brief Determines the cities affected by the removal of a water reservoir.
+     *
+     * @return Unordered map containing the city code and the amount of water it will not receive.
+     *
+     * Time Complexity: O(VE^2), where V is the number of vertices in the graph and E is the number of edges.
+     */
+    static unordered_map<string, double> affectedCitiesAfterReservoirRemoval(Graph& mainGraph, const string& removedReservoir);
 
     /**
      * @brief Determines the cities affected by a pipeline failure.

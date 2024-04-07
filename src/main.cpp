@@ -119,8 +119,12 @@ int main(){
         }
 
         if (filter == 4) {
+            string r;
+            cout << "Which water reservoir do you want to remove?" << endl;
+            cin >> r;
 
-            // TO DO
+            cout << "These cities will be affected by the removal of the water reservoir " << r << ": " << endl;
+            Graph::affectedCitiesAfterReservoirRemoval(mainGraph, r);
 
             cout << "\nType 1 to return: ";
             int userInput;

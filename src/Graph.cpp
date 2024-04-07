@@ -73,6 +73,34 @@ double Graph::edmondsKarp(WaterReservoir s, DeliverySite t, Graph& mainGraph) {
     return flow;
 }
 
+void Graph::updateWaterReservoirs(const unordered_map<string, WaterReservoir>& reservoirs) {
+    for (const auto& reservoir : reservoirs) {
+        waterReservoirs[reservoir.first] = reservoir.second;
+    }
+}
+
+unordered_map<string, double> Graph::affectedCitiesAfterReservoirRemoval(Graph& mainGraph, const string& removedReservoir) {
+    unordered_map<string, double> affectedCities;
+
+    unordered_map<string, WaterReservoir> updatedReservoirs = mainGraph.getWaterReservoirs();
+    updatedReservoirs.erase(removedReservoir);
+    mainGraph.updateWaterReservoirs(updatedReservoirs);
+
+    for (const auto& city : mainGraph.getDeliverySites()) {
+        const string &cityCode = city.first;
+        const DeliverySite &deliverySite = city.second;
+
+        double newflow = waterNeeds::maxFlow(mainGraph, cityCode)[city.first];
+
+        if (newflow < deliverySite.getDemand()) {
+            double deficit = deliverySite.getDemand() - newflow;
+            affectedCities[cityCode] = deficit;
+        }
+    }
+
+    return affectedCities;
+}
+
 unordered_map<string, vector<pair<string, double>>> Graph::pipeAffectedCities(Graph& mainGraph, vector<Pipeline> pipelines){
     unordered_map<string, vector<pair<string, double>>> affectedCities;
     if(pipelines.empty()) pipelines = mainGraph.getPipelines();
