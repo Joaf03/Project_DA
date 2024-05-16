@@ -123,7 +123,7 @@ namespace svg
                 {
                     const char *group_child_name = group_child->Name();
 
-                    if (strcmp(name, "rect") == 0)
+                    if (strcmp(group_child_name, "rect") == 0)
                     {
                         // Dar parse aos atributos do retângulo e criar rect
                         int x = child->IntAttribute("x");
@@ -132,9 +132,9 @@ namespace svg
                         int height = child->IntAttribute("height");
                         string fill = child->Attribute("fill");
                         Color color = parse_color(fill);
-                        svg_elements.push_back(new rect(color, {x, y}, width, height));
+                        group_elements.push_back(new rect(color, {x, y}, width, height));
                     }
-                    else if (strcmp(name, "circle") == 0)
+                    else if (strcmp(group_child_name, "circle") == 0)
                     {
                         // Dar parse aos atributos do círculo e criar Circle
                         int cx = child->IntAttribute("cx");
@@ -142,9 +142,9 @@ namespace svg
                         int r = child->IntAttribute("r");
                         string fill = child->Attribute("fill");
                         Color color = parse_color(fill);
-                        svg_elements.push_back(new Circle(color, {cx, cy}, {r, r}));
+                        group_elements.push_back(new Circle(color, {cx, cy}, {r, r}));
                     }
-                    else if (strcmp(name, "line") == 0)
+                    else if (strcmp(group_child_name, "line") == 0)
                     {
                         // Dar parse aos atributos da linha e criar line
                         int x1 = child->IntAttribute("x1");
@@ -153,9 +153,9 @@ namespace svg
                         int y2 = child->IntAttribute("y2");
                         string stroke = child->Attribute("stroke");
                         Color color = parse_color(stroke);
-                        svg_elements.push_back(new line({x1, y1}, {x2, y2}, color));
+                        group_elements.push_back(new line({x1, y1}, {x2, y2}, color));
                     }
-                    else if (strcmp(name, "ellipse") == 0)
+                    else if (strcmp(group_child_name, "ellipse") == 0)
                     {
                         // Dar parse aos atributos da elipse e criar Ellipse
                         int cx = child->IntAttribute("cx");
@@ -164,10 +164,10 @@ namespace svg
                         int ry = child->IntAttribute("ry");
                         string fill = child->Attribute("fill");
                         Color color = parse_color(fill);
-                        svg_elements.push_back(new Ellipse(color, {cx, cy}, {rx, ry}));
+                        group_elements.push_back(new Ellipse(color, {cx, cy}, {rx, ry}));
                     }
 
-                    else if (strcmp(name, "polyline") == 0)
+                    else if (strcmp(group_child_name, "polyline") == 0)
                     {
                         // Dar parse aos atributos do polyline e criar polyline
                         string points_str = child->Attribute("points");
@@ -184,10 +184,10 @@ namespace svg
                         }
                         string fill = child->Attribute("fill");
                         Color color = parse_color(fill);
-                        svg_elements.push_back(new polyline(color, points));
+                        group_elements.push_back(new polyline(color, points));
                     }
 
-                    if (strcmp(name, "polygon") == 0)
+                    if (strcmp(group_child_name, "polygon") == 0)
                     {
                         // Dar parse aos atributos do polígono e criar polygon
                         string points_str = child->Attribute("points");
@@ -204,7 +204,7 @@ namespace svg
                         }
                         string fill = child->Attribute("fill");
                         Color color = parse_color(fill);
-                        svg_elements.push_back(new polygon(color, points));
+                        group_elements.push_back(new polygon(color, points));
                     }
                     group_child = group_child->NextSiblingElement();
                 }

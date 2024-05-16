@@ -1,73 +1,82 @@
 #include "SVGElements.hpp"
-#include <vector> //! included vector
+#include <vector>
 
 namespace svg
 {
-    // These must be defined!
-    SVGElement::SVGElement() {}
-    SVGElement::~SVGElement() {}
 
-    // Ellipse (initial code provided)
-    Ellipse::Ellipse(const Color &fill,
-                     const Point &center,
-                     const Point &radius)
-        : fill(fill), center(center), radius(radius)
-    {
-    }
-    void Ellipse::draw(PNGImage &img) const
+    Circle::Circle(const Color &fill,
+                   const Point &center,
+                   const Point &radius)
+        : Ellipse(fill, center, radius) {}
+    void Circle::draw(PNGImage &img) const
     {
         img.draw_ellipse(center, radius, fill);
     }
-    // @todo provide the implementation of SVGElement derived classes
-
-    //! Circle
-    //! knowing circle is a subclass of ellipse, circle
-    //! will have again a radius, center and a fill variable
-    //! and will have : Ellipse(fill,center,radius), since these attributes come from the Ellipse
-    void Circle::draw(PNGImage &img) const
-    {
-        img.draw_ellipse(center, radius, fill); //! and the draw function
-    }
-
-    //! Polyline implementation
-
-    //! the implementation is similar as circle
-    //! we have the fill and a vector of points
-    //! however in the draw function we need to
-    //! draw a line between a series of points
-    //! therefore we use a for loop to iterate between all the points
-    //! and draw a line between each one
 
     polyline::polyline(const Color &fill,
                        const std::vector<Point> &points)
         : fill(fill), points(points) {}
+
     void polyline::draw(PNGImage &img) const
     {
         for (size_t i = 0; i < points.size() - 1; i++)
         {
-            img.draw_line(points[i], points[i + 1], fill); //! the function draw to each point
+            img.draw_line(points[i], points[i + 1], fill);
         }
     }
 
-    //! line implementation
-    //! the line will contain a start and end point
-    //! we can create a temporary vector of points to store the start and end points
-    //! after that we make the draw fucntion, which will have as arguments the start and end point and the fill
+    void polyline::translate(float dx, float dy)
+    {
+        // Translate each point of the polyline
+        for (Point &point : points)
+        {
+            point.x += dx;
+            point.y += dy;
+        }
+    }
+
+    void polyline::rotate(float angle, const Point &center)
+    {
+        // Translate each point of the polyline to the origin, rotate, and then translate back
+        float radianAngle = angle * 3.1415926 / 180.0; // Convert degrees to radians
+        float cosTheta = cos(radianAngle);
+        float sinTheta = sin(radianAngle);
+
+        for (Point &point : points)
+        {
+            // Translate to the origin
+            float translatedX = point.x - center.x;
+            float translatedY = point.y - center.y;
+
+            // Perform rotation
+            float rotatedX = translatedX * cosTheta - translatedY * sinTheta;
+            float rotatedY = translatedX * sinTheta + translatedY * cosTheta;
+
+            // Translate back
+            point.x = rotatedX + center.x;
+            point.y = rotatedY + center.y;
+        }
+    }
+
+    void polyline::scale(float sx, float sy)
+    {
+        // Scale each point of the polyline
+        for (Point &point : points)
+        {
+            point.x *= sx;
+            point.y *= sy;
+        }
+    }
 
     line::line(const Point &start,
                const Point &end,
                const Color &fill)
-        : polyline(fill, std::vector<Point>{start, end}) {}
+        : polyline(fill, std::vector<Point>{start, end}), start(start), end(end) {}
 
     void line::draw(PNGImage &img) const
     {
         img.draw_line(start, end, fill);
     }
-
-    //! polygon
-    //! will have the fill stroke and a vector of points
-    //! and the function draw, here the for loop won't be needed like the polyline
-    //! because the draw_polygon class already takes a vector of points as a argument, unlike the draw_line function
 
     polygon::polygon(const Color &fill,
                      const std::vector<Point> &points)
@@ -76,8 +85,48 @@ namespace svg
     {
         img.draw_polygon(points, fill);
     }
+    void polygon::translate(float dx, float dy)
+    {
+        // Translate each point of the polygon
+        for (Point &point : points)
+        {
+            point.x += dx;
+            point.y += dy;
+        }
+    }
 
-    //! rectangle
+    void polygon::rotate(float angle, const Point &center)
+    {
+        // Translate each point of the polygon to the origin, rotate, and then translate back
+        float radianAngle = angle * 3.1415926 / 180.0; // Convert degrees to radians
+        float cosTheta = cos(radianAngle);
+        float sinTheta = sin(radianAngle);
+
+        for (Point &point : points)
+        {
+            // Translate to the origin
+            float translatedX = point.x - center.x;
+            float translatedY = point.y - center.y;
+
+            // Perform rotation
+            float rotatedX = translatedX * cosTheta - translatedY * sinTheta;
+            float rotatedY = translatedX * sinTheta + translatedY * cosTheta;
+
+            // Translate back
+            point.x = rotatedX + center.x;
+            point.y = rotatedY + center.y;
+        }
+    }
+
+    void polygon::scale(float sx, float sy)
+    {
+        // Scale each point of the polygon
+        for (Point &point : points)
+        {
+            point.x *= sx;
+            point.y *= sy;
+        }
+    }
 
     rect::rect(const Color &fill, const Point &upper_left_corner,
                const int &width,
@@ -87,8 +136,81 @@ namespace svg
                             {upper_left_corner.x + width, upper_left_corner.y},
                             {upper_left_corner.x + width, upper_left_corner.y + height},
                             {upper_left_corner.x, upper_left_corner.y + height}}) {}
+
     void rect::draw(PNGImage &img) const
     {
         img.draw_polygon(points, fill);
+    }
+
+    void rect::translate(float dx, float dy)
+    {
+        upper_left_corner.x += dx;
+        upper_left_corner.y += dy;
+        for (auto &point : points)
+        {
+            point.x += dx;
+            point.y += dy;
+        }
+    }
+
+    void rect::rotate(float angle, const Point &center)
+    {
+        float radians = angle * 3.1415926 / 180.0f;
+        for (auto &point : points)
+        {
+            float x_new = center.x + (point.x - center.x) * cos(radians) - (point.y - center.y) * sin(radians);
+            float y_new = center.y + (point.x - center.x) * sin(radians) + (point.y - center.y) * cos(radians);
+            point.x = x_new;
+            point.y = y_new;
+        }
+    }
+
+    void rect::scale(float sx, float sy)
+    {
+        for (auto &point : points)
+        {
+            point.x = upper_left_corner.x + (point.x - upper_left_corner.x) * sx;
+            point.y = upper_left_corner.y + (point.y - upper_left_corner.y) * sy;
+        }
+    }
+
+    Group::Group(std::vector<SVGElement *> &elements, const std::string &id)
+        : elements(elements), id_(id)
+    {
+    }
+
+    void Group::draw(PNGImage &img) const
+    {
+        for (const SVGElement *element : elements)
+        {
+            element->draw(img);
+        }
+    }
+
+    void Group::translate(float dx, float dy)
+    {
+        // Translate each element in the group
+        for (SVGElement *element : elements)
+        {
+            element->translate(dx, dy);
+        }
+    }
+
+    void Group::rotate(float angle, const Point &center)
+    {
+        // Rotate each element in the group around the specified center point
+        for (SVGElement *element : elements)
+        {
+            element->rotate(angle, center);
+        }
+    }
+
+    void Group::scale(float sx, float sy)
+    {
+        // Scale each element in the group
+        for (SVGElement *element : elements)
+        {
+            element->scale(sx, sy);
+        }
     }
 }
